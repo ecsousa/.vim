@@ -10,7 +10,6 @@ Plugin 'kennethzfeng/vim-raml'
 Plugin 'tpope/vim-dispatch'
 Plugin 'bling/vim-airline'
 Plugin 'PProvost/vim-ps1'
-Plugin 'airblade/vim-gitgutter'
 
 set laststatus=2
 
