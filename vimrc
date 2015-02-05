@@ -18,7 +18,8 @@ if filereadable(s:thisPath . '/plugins/omnisharp-vim/server/OmniSharp/bin/Debug/
     execute 'source' (s:thisPath . '/OmniSharp.vim')
 endif
 
-execute 'source' (s:thisPath . '/key-mappings.vim')
+execute 'source' (s:thisPath . '/global-key-mappings.vim')
+execute 'source' (s:thisPath . '/local-key-mappings.vim')
 
 filetype plugin indent on
 

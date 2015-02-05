@@ -1,20 +1,23 @@
 "My custom key mappings
 "To be used by vim and VsVim
 
-let s:thisFile = expand('<sfile>')
+let s:thisPath = expand('<sfile>')
+let s:thisFile = expand('<sfile>:t')
+
+let s:cmd = 'nnoremap <leader>eg :tabnew<cr>:e ' . s:thisPath . '<cr>'
+execute s:cmd
+
+augroup MyGlobalMappings
+    autocmd!
+
+    let s:cmd = 'autocmd BufWritePost ' . s:thisFile . ' :source ' . s:thisPath
+    execute s:cmd
+
+augroup END
 
 let mapleader = '-'
 
 inoremap <ESC> <NOP>
-
-inoremap <UP> <NOP>
-inoremap <DOWN> <NOP>
-inoremap <LEFT> <NOP>
-inoremap <RIGHT> <NOP>
-inoremap <HOME> <NOP>
-inoremap <END> <NOP>
-inoremap <PAGEUP> <NOP>
-inoremap <PAGEDOWN> <NOP>
 
 nnoremap <UP> <NOP>
 nnoremap <DOWN> <NOP>
@@ -35,11 +38,6 @@ vnoremap <PAGEUP> <NOP>
 vnoremap <PAGEDOWN> <NOP>
 
 inoremap jk <ESC>
-nnoremap <leader><leader> :
+nnoremap <leader>= :
 
-let s:cmd = 'nnoremap <leader>ev :tabnew<cr>:e ' . s:thisFile . '<cr>'
-execute s:cmd
-
-let s:cmd = 'nnoremap <leader>rv :source ' . s:thisFile . '<cr>'
-execute s:cmd
 
