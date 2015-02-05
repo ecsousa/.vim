@@ -4,7 +4,7 @@
 let s:thisPath = expand('<sfile>')
 let s:thisFile = expand('<sfile>:t')
 
-let s:cmd = 'nnoremap <leader>eg :tabnew<cr>:e ' . s:thisPath . '<cr>'
+let s:cmd = 'nnoremap <leader>ev :tabnew<cr>:e ' . s:thisPath . '<cr>'
 execute s:cmd
 
 augroup MyGlobalMappings
