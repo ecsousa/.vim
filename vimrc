@@ -1,26 +1,24 @@
-
 set nocompatible
 filetype off
 
+let s:thisPath = expand('<sfile>:h')
+
 "Set Vundle at runtimepath
-let s:portable = expand('<sfile>:h') . '/plugins/Vundle.vim'
-execute ('set rtp+=' . s:portable)
+execute ('set rtp+=' . s:thisPath . '/plugins/Vundle.vim')
 
 "Load Vundle
 call vundle#begin()
-let g:bundle_dir = expand('<sfile>:h') . '/plugins'
-let s:portable = expand('<sfile>:h') . '/vundle.vim'
-execute 'source' s:portable
+let g:bundle_dir = s:thisPath . '/plugins'
+execute 'source' (s:thisPath . '/vundle.vim')
 call vundle#end()
 "End Vundle
 
 "Check OmniSharp load needed
-let s:portable = expand('<sfile>:h') . '/plugins/omnisharp-vim/server/OmniSharp/bin/Debug/OmniSharp.exe'
-if filereadable(s:portable) && has('python')
-    let s:portable = expand('<sfile>:h') . '/OmniSharp.vim'
-    execute 'source' s:portable
+if filereadable(s:thisPath . '/plugins/omnisharp-vim/server/OmniSharp/bin/Debug/OmniSharp.exe') && has('python')
+    execute 'source' (s:thisPath . '/OmniSharp.vim')
 endif
 
+execute 'source' (s:thisPath . '/key-mappings.vim')
 
 filetype plugin indent on
 
