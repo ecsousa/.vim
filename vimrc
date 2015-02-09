@@ -1,6 +1,16 @@
 set nocompatible
 filetype off
 
+if has("win32") || has("win16")
+    let s:baseVimrc = expand('$VIM/_vimrc')
+else
+    let s:baseVimrc = expand('$VIM/.vimrc')
+endif
+
+if filereadable(s:baseVimrc)
+    execute 'source' s:baseVimrc
+endif
+
 let s:thisPath = expand('<sfile>:h')
 
 "Set Vundle at runtimepath
