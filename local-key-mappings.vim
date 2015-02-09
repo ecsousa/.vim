@@ -4,14 +4,16 @@
 let s:thisPath = expand('<sfile>')
 let s:thisFile = expand('<sfile>:t')
 
-inoremap <UP> <NOP>
-inoremap <DOWN> <NOP>
-inoremap <LEFT> <NOP>
-inoremap <RIGHT> <NOP>
-inoremap <HOME> <NOP>
-inoremap <END> <NOP>
-inoremap <PAGEUP> <NOP>
-inoremap <PAGEDOWN> <NOP>
+"inoremap <ESC> <NOP>
+
+"inoremap <UP> <NOP>
+"inoremap <DOWN> <NOP>
+"inoremap <LEFT> <NOP>
+"inoremap <RIGHT> <NOP>
+"inoremap <HOME> <NOP>
+"inoremap <END> <NOP>
+"inoremap <PAGEUP> <NOP>
+"inoremap <PAGEDOWN> <NOP>
 
 let s:cmd = 'nnoremap <leader>el :tabnew<cr>:e ' . s:thisPath . '<cr>'
 execute s:cmd
