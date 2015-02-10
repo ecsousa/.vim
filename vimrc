@@ -1,6 +1,8 @@
 set nocompatible
 filetype off
 
+let mapleader = '-'
+
 if has("win32") || has("win16")
     let s:baseVimrc = expand('$VIM/_vimrc')
 else
@@ -16,17 +18,14 @@ let s:thisPath = expand('<sfile>:h')
 "Set Vundle at runtimepath
 execute ('set rtp+=' . s:thisPath . '/plugins/Vundle.vim')
 
-"Load Vundle
-call vundle#begin()
-let g:bundle_dir = s:thisPath . '/plugins'
-execute 'source' (s:thisPath . '/vundle.vim')
-call vundle#end()
-"End Vundle
-
 "Check OmniSharp load needed
 if filereadable(s:thisPath . '/plugins/omnisharp-vim/server/OmniSharp/bin/Debug/OmniSharp.exe') && has('python')
     execute 'source' (s:thisPath . '/OmniSharp.vim')
 endif
+
+"Load Vundle
+execute 'source' (s:thisPath . '/vundle.vim')
+"End Vundle
 
 execute 'source' (s:thisPath . '/global-key-mappings.vim')
 execute 'source' (s:thisPath . '/local-key-mappings.vim')

@@ -1,3 +1,8 @@
+let s:thisLocaltion = expand('<sfile>:h')
+
+call vundle#begin()
+let g:bundle_dir = s:thisLocaltion . '/plugins'
+
 Plugin 'ecsousa/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tmhedberg/matchit'
@@ -16,4 +21,20 @@ set laststatus=2
 if (has('python'))
     Plugin 'OmniSharp/omnisharp-vim'
 endif
+
+call vundle#end()
+
+let s:thisPath = expand('<sfile>')
+let s:thisFile = expand('<sfile>:t')
+
+let s:cmd = 'nnoremap <leader>ev :tabnew<cr>:e ' . s:thisPath . '<cr>'
+execute s:cmd
+
+augroup VundleMappings
+    autocmd!
+
+    let s:cmd = 'autocmd BufWritePost ' . s:thisFile . ' :source ' . s:thisPath
+    execute s:cmd
+
+augroup END
 
