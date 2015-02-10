@@ -15,14 +15,17 @@ Plugin 'kennethzfeng/vim-raml'
 Plugin 'tpope/vim-dispatch'
 Plugin 'bling/vim-airline'
 Plugin 'PProvost/vim-ps1'
-
-set laststatus=2
+if has('mac')
+    Plugin 'rizzatti/dash.vim'
+endif
 
 if (has('python'))
     Plugin 'OmniSharp/omnisharp-vim'
 endif
 
 call vundle#end()
+
+set laststatus=2
 
 let s:thisPath = expand('<sfile>')
 let s:thisFile = expand('<sfile>:t')
