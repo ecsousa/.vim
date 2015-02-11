@@ -16,6 +16,7 @@ Plugin 'tpope/vim-dispatch'
 Plugin 'bling/vim-airline'
 Plugin 'PProvost/vim-ps1'
 Plugin 'Shougo/unite.vim'
+Plugin 'tpope/vim-fugitive'
 
 if has('mac')
     Plugin 'rizzatti/dash.vim'
