@@ -1,8 +1,6 @@
 "My custom key mappings
 "To be used by vim and VsVim
 
-let mapleader = '-'
-
 let s:thisPath = expand('<sfile>')
 let s:thisFile = expand('<sfile>:t')
 
