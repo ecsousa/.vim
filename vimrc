@@ -95,27 +95,31 @@ nmap <TAB>l :tablast<CR>
 nmap <TAB>x :tabclose<CR>
 
 " set default filetypes
-autocmd BufNewFile,BufRead *.vb set ft=vbnet
-autocmd BufNewFile,BufRead *._ps1 set ft=ps1
-autocmd BufNewFile,BufRead *.ps1 set ft=ps1
-autocmd BufNewFile,BufRead *.psm1 set ft=ps1
-autocmd BufNewFile,BufRead *.msbuild set ft=xml
-autocmd BufNewFile,BufRead *.targets set ft=xml
-autocmd BufNewFile,BufRead *.properties set ft=xml
-autocmd BufNewFile,BufRead *.tasks set ft=xml
-autocmd BufNewFile,BufRead *.proj set ft=xml
-autocmd BufNewFile,BufRead *.props set ft=xml
-autocmd BufNewFile,BufRead *.fsx set ft=fs
+augroup MyVimrc
+    autocmd!
+    autocmd BufNewFile,BufRead *.vb set ft=vbnet
+    autocmd BufNewFile,BufRead *._ps1 set ft=ps1
+    autocmd BufNewFile,BufRead *.ps1 set ft=ps1
+    autocmd BufNewFile,BufRead *.psm1 set ft=ps1
+    autocmd BufNewFile,BufRead *.msbuild set ft=xml
+    autocmd BufNewFile,BufRead *.targets set ft=xml
+    autocmd BufNewFile,BufRead *.properties set ft=xml
+    autocmd BufNewFile,BufRead *.tasks set ft=xml
+    autocmd BufNewFile,BufRead *.proj set ft=xml
+    autocmd BufNewFile,BufRead *.props set ft=xml
+    autocmd BufNewFile,BufRead *.fsx set ft=fs
 
-autocmd BufNewFile,BufRead *.wxi set ft=xml
-autocmd BufNewFile,BufRead *.wxs set ft=xml
+    autocmd BufNewFile,BufRead *.wxi set ft=xml
+    autocmd BufNewFile,BufRead *.wxs set ft=xml
 
-autocmd BufNewFile,BufRead COMMIT_EDITMSG set enc=utf8
-autocmd BufNewFile,BufRead *.config set tabstop=2 shiftwidth=2 enc=utf8
-autocmd BufNewFile,BufRead *.xml set tabstop=2 shiftwidth=2 enc=utf8
-autocmd BufNewFile,BufRead *.wxi set tabstop=2 shiftwidth=2 enc=utf8
-autocmd BufNewFile,BufRead *.wxs set tabstop=2 shiftwidth=2 enc=utf8
-autocmd BufNewFile,BufRead *.nuspec set tabstop=2 shiftwidth=2 enc=utf8
+    autocmd BufNewFile,BufRead COMMIT_EDITMSG set enc=utf8
+    autocmd BufNewFile,BufRead COMMIT_EDITMSG normal! gg
+    autocmd BufNewFile,BufRead *.config set tabstop=2 shiftwidth=2 enc=utf8
+    autocmd BufNewFile,BufRead *.xml set tabstop=2 shiftwidth=2 enc=utf8
+    autocmd BufNewFile,BufRead *.wxi set tabstop=2 shiftwidth=2 enc=utf8
+    autocmd BufNewFile,BufRead *.wxs set tabstop=2 shiftwidth=2 enc=utf8
+    autocmd BufNewFile,BufRead *.nuspec set tabstop=2 shiftwidth=2 enc=utf8
+augroup END
 
 " Multi cursor mapping
 
