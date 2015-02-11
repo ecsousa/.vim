@@ -10,6 +10,7 @@ Plugin 'kennethzfeng/vim-raml'
 Plugin 'tpope/vim-dispatch'
 Plugin 'bling/vim-airline'
 Plugin 'PProvost/vim-ps1'
+Plugin 'Shougo/unite.vim'
 
 set laststatus=2
 
