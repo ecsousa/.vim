@@ -65,6 +65,7 @@ syntax on
 " setup preferences
 set shiftwidth=4 tabstop=4
 set nobackup
+set noundofile
 set nowritebackup
 set nowrap
 set ignorecase
