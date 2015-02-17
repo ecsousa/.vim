@@ -39,7 +39,12 @@ if !empty($CONEMUBUILD)
 endif 
 set t_Co=256 
 
-colo torte
+
+if filereadable(globpath(&rtp, 'colors/af.vim'))
+    colo af
+else
+    colo torte
+endif
 
 " setup gui interface
 if has("gui_running")

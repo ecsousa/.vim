@@ -17,6 +17,8 @@ Plugin 'bling/vim-airline'
 Plugin 'PProvost/vim-ps1'
 Plugin 'Shougo/unite.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'vim-scripts/ScrollColors'
 
 if has('mac')
     Plugin 'rizzatti/dash.vim'
