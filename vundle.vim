@@ -19,6 +19,7 @@ Plugin 'Shougo/unite.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-scripts/ScrollColors'
+Plugin 'eduardo-claudio/inquiry.vim'
 
 if has('mac')
     Plugin 'rizzatti/dash.vim'
