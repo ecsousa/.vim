@@ -87,8 +87,6 @@ endif
 vnoremap > >gv
 vnoremap < <gv
 
-nmap <SPACE> <SPACE>:noh<CR>
-
 nmap <TAB><TAB> :NERDTreeCWD<CR>
 nmap <TAB>q :NERDTreeClose<CR>
 nmap <TAB>s :VimShellTab<CR>

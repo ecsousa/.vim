@@ -5,6 +5,7 @@ let s:thisPath = expand('<sfile>')
 let s:thisFile = expand('<sfile>:t')
 
 vnoremap G G$
+nmap <SPACE> <SPACE>:noh<CR>
 
 let s:cmd = 'nnoremap <leader>eg :tabnew<cr>:e ' . s:thisPath . '<cr>'
 execute s:cmd
