@@ -16,10 +16,12 @@ Plugin 'tpope/vim-dispatch'
 Plugin 'bling/vim-airline'
 Plugin 'PProvost/vim-ps1'
 Plugin 'Shougo/unite.vim'
+Plugin 'Shougo/neomru.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-scripts/ScrollColors'
 Plugin 'eduardo-claudio/inquiry.vim'
+Plugin 'Shougo/unite-outline'
 
 if has('mac')
     Plugin 'rizzatti/dash.vim'
