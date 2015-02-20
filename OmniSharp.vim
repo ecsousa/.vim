@@ -45,7 +45,7 @@ augroup omnisharp_commands
     " Synchronous build (blocks Vim)
     "autocmd FileType cs nnoremap <buffer> <F5> :wa!<cr>:OmniSharpBuild<cr>
     " Builds can also run asynchronously with vim-dispatch installed
-    autocmd FileType cs nnoremap <buffer> <leader>b :wa!<cr>:OmniSharpBuildAsync<cr>
+    autocmd FileType cs nnoremap <buffer> <leader>gb :wa!<cr>:OmniSharpBuildAsync<cr>
     " automatic syntax check on events (TextChanged requires Vim 7.4)
     autocmd BufEnter,TextChanged,InsertLeave *.cs SyntasticCheck
 
