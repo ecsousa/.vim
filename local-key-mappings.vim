@@ -4,16 +4,13 @@
 let s:thisPath = expand('<sfile>')
 let s:thisFile = expand('<sfile>:t')
 
-"inoremap <ESC> <NOP>
 
-"inoremap <UP> <NOP>
-"inoremap <DOWN> <NOP>
-"inoremap <LEFT> <NOP>
-"inoremap <RIGHT> <NOP>
-"inoremap <HOME> <NOP>
-"inoremap <END> <NOP>
-"inoremap <PAGEUP> <NOP>
-"inoremap <PAGEDOWN> <NOP>
+nnoremap <TAB>t :tabnew<CR>
+nnoremap <TAB>n :tabn<CR>
+nnoremap <TAB>p :tabp<CR>
+nnoremap <TAB>f :tabfirst<CR>
+nnoremap <TAB>l :tablast<CR>
+nnoremap <TAB>x :tabclose<CR>
 
 " Unite
 let g:unite_source_history_yank_enable = 1

@@ -1,2 +1,2 @@
 plugins/*
-!plugins/Vundle.vim
+!plugins/neobundle.vim

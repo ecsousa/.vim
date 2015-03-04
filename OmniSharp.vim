@@ -71,8 +71,12 @@ augroup omnisharp_commands
     autocmd FileType cs nnoremap <buffer> <leader>dc :OmniSharpDocumentation<cr>
     "navigate up by method/property/field
     autocmd FileType cs nnoremap <buffer> <C-K> :OmniSharpNavigateUp<cr>
+    autocmd FileType cs onoremap <buffer> <C-K> :OmniSharpNavigateUp<cr>
+    autocmd FileType cs vnoremap <buffer> <C-K> :OmniSharpNavigateUp<cr>
     "navigate down by method/property/field
     autocmd FileType cs nnoremap <buffer> <C-J> :OmniSharpNavigateDown<cr>
+    autocmd FileType cs onoremap <buffer> <C-J> :OmniSharpNavigateDown<cr>
+    autocmd FileType cs vnoremap <buffer> <C-J> :OmniSharpNavigateDown<cr>
 
     autocmd BufEnter *.cs setlocal cmdheight=2
     autocmd BufLeave *.cs setlocal cmdheight=1

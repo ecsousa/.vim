@@ -1,5 +1,5 @@
 set nocompatible
-filetype off
+"filetype off
 
 let mapleader = '-'
 
@@ -15,22 +15,22 @@ endif
 
 let s:thisPath = expand('<sfile>:h')
 
-"Set Vundle at runtimepath
-execute ('set rtp+=' . s:thisPath . '/plugins/Vundle.vim')
+"Set NeoBundle at runtimepath
+execute ('set rtp+=' . s:thisPath . '/plugins/neobundle.vim/')
+
+"Load NeoBundle
+execute 'source' (s:thisPath . '/neobundle.vim')
+filetype plugin indent on
+"End NeoBundle
 
 "Check OmniSharp load needed
 if filereadable(s:thisPath . '/plugins/omnisharp-vim/server/OmniSharp/bin/Debug/OmniSharp.exe') && has('python')
     execute 'source' (s:thisPath . '/OmniSharp.vim')
 endif
 
-"Load Vundle
-execute 'source' (s:thisPath . '/vundle.vim')
-"End Vundle
-
 execute 'source' (s:thisPath . '/global-key-mappings.vim')
 execute 'source' (s:thisPath . '/local-key-mappings.vim')
 
-filetype plugin indent on
 
 if !empty($CONEMUBUILD) 
   set term=xterm 
@@ -84,18 +84,6 @@ endif
 
 " key mappings
 
-vnoremap > >gv
-vnoremap < <gv
-
-nmap <TAB><TAB> :NERDTreeCWD<CR>
-nmap <TAB>q :NERDTreeClose<CR>
-nmap <TAB>s :VimShellTab<CR>
-nmap <TAB>t :tabnew<CR>
-nmap <TAB>n :tabn<CR>
-nmap <TAB>p :tabp<CR>
-nmap <TAB>f :tabfirst<CR>
-nmap <TAB>l :tablast<CR>
-nmap <TAB>x :tabclose<CR>
 
 " set default filetypes
 augroup MyVimrc
@@ -122,13 +110,6 @@ augroup MyVimrc
     autocmd BufNewFile,BufRead *.wxi set tabstop=2 shiftwidth=2 enc=utf8
     autocmd BufNewFile,BufRead *.wxs set tabstop=2 shiftwidth=2 enc=utf8
     autocmd BufNewFile,BufRead *.nuspec set tabstop=2 shiftwidth=2 enc=utf8
+    autocmd FileType ruby,eruby set filetype=ruby.eruby.chef
 augroup END
-
-" Multi cursor mapping
-
-let g:multi_cursor_use_default_mapping=0
-let g:multi_cursor_next_key='<C-n>'
-let g:multi_cursor_prev_key='<C-p>'
-let g:multi_cursor_skip_key='<C-x>'
-let g:multi_cursor_quit_key='<C-o>'
 
