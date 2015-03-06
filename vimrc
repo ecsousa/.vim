@@ -34,8 +34,10 @@ execute 'source' (s:thisPath . '/local-key-mappings.vim')
 
 if !empty($CONEMUBUILD) 
   set term=xterm 
+  set termencoding=utf8
   let &t_AB="\e[48;5;%dm" 
   let &t_AF="\e[38;5;%dm" 
+  normal! a
 endif 
 set t_Co=256 
 
@@ -113,3 +115,6 @@ augroup MyVimrc
     autocmd FileType ruby,eruby set filetype=ruby.eruby.chef
 augroup END
 
+if has('gui') && (has('win32') || has('win64'))
+    set guifont=Consolas:h12:cANSI
+endif
