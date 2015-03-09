@@ -18,6 +18,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'vim-scripts/ScrollColors'
 NeoBundle 'Shougo/unite-outline'
+NeoBundle 'fsharp/fsharpbinding', {'rtp': 'vim'}
 
 " Chef stuff
 NeoBundle 'MarcWeber/vim-addon-mw-utils'
@@ -44,7 +45,7 @@ set laststatus=2
 let s:thisPath = expand('<sfile>')
 let s:thisFile = expand('<sfile>:t')
 
-let s:cmd = 'nnoremap <leader>ev :tabnew<cr>:e ' . s:thisPath . '<cr>'
+let s:cmd = 'nnoremap <leader>ev :e ' . s:thisPath . '<cr>'
 execute s:cmd
 
 augroup VundleMappings

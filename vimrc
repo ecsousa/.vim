@@ -100,7 +100,6 @@ augroup MyVimrc
     autocmd BufNewFile,BufRead *.tasks set ft=xml
     autocmd BufNewFile,BufRead *.proj set ft=xml
     autocmd BufNewFile,BufRead *.props set ft=xml
-    autocmd BufNewFile,BufRead *.fsx set ft=fs
 
     autocmd BufNewFile,BufRead *.wxi set ft=xml
     autocmd BufNewFile,BufRead *.wxs set ft=xml
@@ -116,5 +115,6 @@ augroup MyVimrc
 augroup END
 
 if has('gui') && (has('win32') || has('win64'))
-    set guifont=Consolas:h12:cANSI
+    set guifont=Inconsolata:h12:cANSI ",Consolas:h12:cANSI
 endif
+
