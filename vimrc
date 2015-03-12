@@ -118,7 +118,5 @@ if has('gui') && (has('win32') || has('win64'))
     set guifont=Inconsolata:h12:cANSI ",Consolas:h12:cANSI
 endif
 
-let g:vimshell_prompt = 'powershell.exe'
-
 "completely disable bells
 set noeb vb t_vb=
