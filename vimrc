@@ -119,4 +119,9 @@ if has('gui') && (has('win32') || has('win64'))
 endif
 
 "completely disable bells
-set noeb vb t_vb=
+if has('gui')
+    set noeb novb
+else
+    set noeb vb t_vb=
+endif
+
