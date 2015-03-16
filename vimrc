@@ -24,9 +24,9 @@ filetype plugin indent on
 "End NeoBundle
 
 "Check OmniSharp load needed
-if filereadable(s:thisPath . '/plugins/omnisharp-vim/server/OmniSharp/bin/Debug/OmniSharp.exe') && has('python')
-    execute 'source' (s:thisPath . '/OmniSharp.vim')
-endif
+"if filereadable(s:thisPath . '/plugins/omnisharp-vim/server/OmniSharp/bin/Debug/OmniSharp.exe') && has('python')
+"    execute 'source' (s:thisPath . '/OmniSharp.vim')
+"endif
 
 execute 'source' (s:thisPath . '/global-key-mappings.vim')
 execute 'source' (s:thisPath . '/local-key-mappings.vim')

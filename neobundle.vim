@@ -32,9 +32,9 @@ if has('mac')
     NeoBundle 'rizzatti/dash.vim'
 endif
 
-if (has('python'))
-    NeoBundle 'OmniSharp/omnisharp-vim'
-endif
+"if (has('python'))
+"    NeoBundle 'OmniSharp/omnisharp-vim'
+"endif
 
 call neobundle#end()
 
