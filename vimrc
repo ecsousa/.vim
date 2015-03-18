@@ -32,14 +32,14 @@ execute 'source' (s:thisPath . '/global-key-mappings.vim')
 execute 'source' (s:thisPath . '/local-key-mappings.vim')
 
 
-if !empty($CONEMUBUILD) 
-  set term=xterm 
+if !empty($CONEMUBUILD)
+  set term=xterm
   set termencoding=utf8
-  let &t_AB="\e[48;5;%dm" 
-  let &t_AF="\e[38;5;%dm" 
+  let &t_AB="\e[48;5;%dm"
+  let &t_AF="\e[38;5;%dm"
   normal! a
-endif 
-set t_Co=256 
+endif
+set t_Co=256
 
 
 if filereadable(globpath(&rtp, 'colors/af.vim'))
@@ -115,7 +115,12 @@ augroup MyVimrc
 augroup END
 
 if has('gui') && (has('win32') || has('win64'))
-    set guifont=Inconsolata:h12:cANSI ",Consolas:h12:cANSI
+    set encoding=utf8
+    let g:airline_powerline_fonts = 1
+    set guifont=Inconsolata\ for\ Powerline:h12:cANSI,Inconsolata:h12:cANSI,Consolas:h12:cANSI
+elseif empty($CONEMUBUILD)
+    "Airline fonts wont work on ConEmu
+    let g:airline_powerline_fonts = 1
 endif
 
 "completely disable bells
