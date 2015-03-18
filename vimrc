@@ -78,6 +78,7 @@ set ignorecase
 set nu
 set expandtab
 set incsearch hlsearch
+set hidden
 
 if has("win32") || has("win16")
     "use TEMP dir for swap in windows
