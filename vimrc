@@ -117,11 +117,11 @@ augroup END
 
 if has('gui') && (has('win32') || has('win64'))
     set encoding=utf8
-    let g:airline_powerline_fonts = 1
-    set guifont=Inconsolata\ for\ Powerline:h12:cANSI,Inconsolata:h12:cANSI,Consolas:h12:cANSI
-elseif empty($CONEMUBUILD)
+    "let g:airline_powerline_fonts = 1
+    set guifont=Consolas:h12:cANSI
+"elseif empty($CONEMUBUILD)
     "Airline fonts wont work on ConEmu
-    let g:airline_powerline_fonts = 1
+    "let g:airline_powerline_fonts = 1
 endif
 
 "completely disable bells
