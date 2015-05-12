@@ -108,6 +108,11 @@ augroup MyVimrc
     autocmd BufNewFile,BufRead COMMIT_EDITMSG set enc=utf8 ft=gitcommit
     autocmd BufNewFile,BufRead COMMIT_EDITMSG normal! gg
     autocmd BufNewFile,BufRead *.config set tabstop=2 shiftwidth=2 enc=utf8
+    autocmd BufNewFile,BufRead *.msbuild set tabstop=2 shiftwidth=2 enc=utf8
+    autocmd BufNewFile,BufRead *.targets set tabstop=2 shiftwidth=2 enc=utf8
+    autocmd BufNewFile,BufRead *.properties set tabstop=2 shiftwidth=2 enc=utf8
+    autocmd BufNewFile,BufRead *.proj set tabstop=2 shiftwidth=2 enc=utf8
+    autocmd BufNewFile,BufRead *.props set tabstop=2 shiftwidth=2 enc=utf8
     autocmd BufNewFile,BufRead *.xml set tabstop=2 shiftwidth=2 enc=utf8
     autocmd BufNewFile,BufRead *.wxi set tabstop=2 shiftwidth=2 enc=utf8
     autocmd BufNewFile,BufRead *.wxs set tabstop=2 shiftwidth=2 enc=utf8
