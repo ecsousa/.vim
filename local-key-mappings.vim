@@ -27,6 +27,18 @@ nnoremap <leader>gw :Gwrite<CR>
 nnoremap <leader>gc :Gcommit<CR>
 nnoremap <leader>gd :Gdiff<CR>
 
+" Tip from VimCasts.org -- http://vimcasts.org/episodes/soft-wrapping-text/
+vnoremap <A-j> gj
+vnoremap <A-k> gk
+vnoremap <A-4> g$
+vnoremap <A-6> g^
+vnoremap <A-0> g^
+nnoremap <A-j> gj
+nnoremap <A-k> gk
+nnoremap <A-4> g$
+nnoremap <A-6> g^
+nnoremap <A-0> g^
+
 " Custom mappings for the unite buffer
 autocmd FileType unite call s:unite_settings()
 function! s:unite_settings()
