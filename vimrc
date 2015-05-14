@@ -101,6 +101,7 @@ augroup MyVimrc
     autocmd BufNewFile,BufRead *.tasks set ft=xml
     autocmd BufNewFile,BufRead *.proj set ft=xml
     autocmd BufNewFile,BufRead *.props set ft=xml
+    autocmd BufNewFile,BufRead *.build set ft=xml
 
     autocmd BufNewFile,BufRead *.wxi set ft=xml
     autocmd BufNewFile,BufRead *.wxs set ft=xml
@@ -113,6 +114,7 @@ augroup MyVimrc
     autocmd BufNewFile,BufRead *.properties set tabstop=2 shiftwidth=2 enc=utf8
     autocmd BufNewFile,BufRead *.proj set tabstop=2 shiftwidth=2 enc=utf8
     autocmd BufNewFile,BufRead *.props set tabstop=2 shiftwidth=2 enc=utf8
+    autocmd BufNewFile,BufRead *.build set tabstop=2 shiftwidth=2 enc=utf8
     autocmd BufNewFile,BufRead *.xml set tabstop=2 shiftwidth=2 enc=utf8
     autocmd BufNewFile,BufRead *.wxi set tabstop=2 shiftwidth=2 enc=utf8
     autocmd BufNewFile,BufRead *.wxs set tabstop=2 shiftwidth=2 enc=utf8
