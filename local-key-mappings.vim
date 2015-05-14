@@ -26,6 +26,9 @@ nnoremap <leader>gw :Gwrite<CR>
 nnoremap <leader>gc :Gcommit<CR>
 nnoremap <leader>gd :Gdiff<CR>
 
+" Use C-O for opening help, and C-] does not work with pt-br keyboard
+nnoremap <C-O> <C-]>
+
 " Tip from VimCasts.org -- http://vimcasts.org/episodes/soft-wrapping-text/
 vnoremap <A-j> gj
 vnoremap <A-k> gk
