@@ -21,6 +21,7 @@ NeoBundle 'Shougo/unite-outline'
 NeoBundle 'fsharp/fsharpbinding', {'rtp': 'vim'}
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/vimproc'
+NeoBundle 'oblitum/rainbow'
 
 " Chef stuff
 NeoBundle 'MarcWeber/vim-addon-mw-utils'
