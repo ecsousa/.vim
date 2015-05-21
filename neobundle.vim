@@ -20,6 +20,7 @@ NeoBundle 'vim-scripts/ScrollColors'
 NeoBundle 'Shougo/unite-outline'
 NeoBundle 'fsharp/fsharpbinding', {'rtp': 'vim'}
 NeoBundle 'oblitum/rainbow'
+NeoBundle 'Shougo/vimfiler'
 
 " Chef stuff
 NeoBundle 'MarcWeber/vim-addon-mw-utils'
