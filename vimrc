@@ -131,6 +131,9 @@ if has('gui') && (has('win32') || has('win64'))
     "let g:airline_powerline_fonts = 1
 endif
 
+" Disable SnipMate snippets in UltiSnippets
+let g:UltiSnipsEnableSnipMate = 0
+
 "completely disable bells
 if has('gui')
     set noeb novb

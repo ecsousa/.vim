@@ -21,12 +21,14 @@ NeoBundle 'Shougo/unite-outline'
 NeoBundle 'fsharp/fsharpbinding', {'rtp': 'vim'}
 NeoBundle 'oblitum/rainbow'
 NeoBundle 'Shougo/vimfiler'
+NeoBundle 'SirVer/ultisnips'
+NeoBundle 'honza/vim-snippets'
 
 " Chef stuff
-NeoBundle 'MarcWeber/vim-addon-mw-utils'
-NeoBundle 'tomtom/tlib_vim'
-NeoBundle 'garbas/vim-snipmate'
-NeoBundle 'vadv/vim-chef'
+" NeoBundle 'MarcWeber/vim-addon-mw-utils'
+" NeoBundle 'tomtom/tlib_vim'
+" NeoBundle 'garbas/vim-snipmate'
+" NeoBundle 'vadv/vim-chef'
 
 if has('mac')
     NeoBundle 'rizzatti/dash.vim'
