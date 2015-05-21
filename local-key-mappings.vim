@@ -14,7 +14,9 @@ nnoremap <TAB>x :tabclose<CR>
 
 " Unite
 let g:unite_source_history_yank_enable = 1
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
+if exists("*unite#filters#matcher_default#use")
+    call unite#filters#matcher_default#use(['matcher_fuzzy'])
+endif
 nnoremap <leader>u :<C-u>Unite -no-split<cr>
 nnoremap <leader>f :<C-u>Unite -no-split -buffer-name=files   -start-insert file<cr>
 nnoremap <leader>r :<C-u>Unite -no-split -buffer-name=mru     -start-insert file_mru<cr>
