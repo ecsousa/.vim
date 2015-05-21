@@ -23,10 +23,13 @@ nnoremap <leader>r :<C-u>Unite -no-split -buffer-name=mru     -start-insert file
 nnoremap <leader>o :<C-u>Unite -no-split -buffer-name=outline -start-insert outline<cr>
 nnoremap <leader>y :<C-u>Unite -no-split -buffer-name=yank history/yank<cr>
 nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffer  buffer<cr>
+
+" Fugitive
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gw :Gwrite<CR>
 nnoremap <leader>gc :Gcommit<CR>
 nnoremap <leader>gd :Gdiff<CR>
+nnoremap <silent><leader>gb gg/^# On branch <CR>f f f  y$:noh<CR>ggPa: 
 
 " Use C-O for opening help, and C-] does not work with pt-br keyboard
 nnoremap <C-O> <C-]>
