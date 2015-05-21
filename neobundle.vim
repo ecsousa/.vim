@@ -19,8 +19,6 @@ NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'vim-scripts/ScrollColors'
 NeoBundle 'Shougo/unite-outline'
 NeoBundle 'fsharp/fsharpbinding', {'rtp': 'vim'}
-NeoBundle 'Shougo/vimshell'
-NeoBundle 'Shougo/vimproc'
 NeoBundle 'oblitum/rainbow'
 
 " Chef stuff
