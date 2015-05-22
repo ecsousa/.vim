@@ -23,6 +23,7 @@ NeoBundle 'oblitum/rainbow'
 NeoBundle 'Shougo/vimfiler'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
+NeoBundle 'tommcdo/vim-exchange'
 
 " Chef stuff
 " NeoBundle 'MarcWeber/vim-addon-mw-utils'
