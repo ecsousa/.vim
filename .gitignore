@@ -1,3 +1,4 @@
 plugins/*
 !plugins/neobundle.vim
 spell/
+.netrwhist
