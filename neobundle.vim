@@ -24,6 +24,8 @@ NeoBundle 'Shougo/vimfiler'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'tommcdo/vim-exchange'
+NeoBundle 'michaeljsmith/vim-indent-object'
+NeoBundle 'diepm/vim-rest-console'
 
 " Chef stuff
 " NeoBundle 'MarcWeber/vim-addon-mw-utils'
