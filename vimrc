@@ -91,6 +91,7 @@ endif
 " set default filetypes
 augroup MyVimrc
     autocmd!
+    autocmd BufNewFile,BufRead COMMIT_EDITMSG set ft=gitcommit
     autocmd BufNewFile,BufRead *.vb set ft=vbnet
     autocmd BufNewFile,BufRead *._ps1 set ft=ps1
     autocmd BufNewFile,BufRead *.ps1 set ft=ps1
@@ -102,24 +103,16 @@ augroup MyVimrc
     autocmd BufNewFile,BufRead *.proj set ft=xml
     autocmd BufNewFile,BufRead *.props set ft=xml
     autocmd BufNewFile,BufRead *.build set ft=xml
-
     autocmd BufNewFile,BufRead *.wxi set ft=xml
     autocmd BufNewFile,BufRead *.wxs set ft=xml
 
-    autocmd BufNewFile,BufRead COMMIT_EDITMSG set enc=utf8 ft=gitcommit spell
-    autocmd BufNewFile,BufRead COMMIT_EDITMSG normal! gg
-    autocmd BufNewFile,BufRead *.config set tabstop=2 shiftwidth=2 enc=utf8
-    autocmd BufNewFile,BufRead *.msbuild set tabstop=2 shiftwidth=2 enc=utf8
-    autocmd BufNewFile,BufRead *.targets set tabstop=2 shiftwidth=2 enc=utf8
-    autocmd BufNewFile,BufRead *.properties set tabstop=2 shiftwidth=2 enc=utf8
-    autocmd BufNewFile,BufRead *.proj set tabstop=2 shiftwidth=2 enc=utf8
-    autocmd BufNewFile,BufRead *.props set tabstop=2 shiftwidth=2 enc=utf8
-    autocmd BufNewFile,BufRead *.build set tabstop=2 shiftwidth=2 enc=utf8
-    autocmd BufNewFile,BufRead *.xml set tabstop=2 shiftwidth=2 enc=utf8
-    autocmd BufNewFile,BufRead *.wxi set tabstop=2 shiftwidth=2 enc=utf8
-    autocmd BufNewFile,BufRead *.wxs set tabstop=2 shiftwidth=2 enc=utf8
-    autocmd BufNewFile,BufRead *.nuspec set tabstop=2 shiftwidth=2 enc=utf8
+    autocmd FileType gitcommit set enc=utf8 spell
+    autocmd FileType gitcommit normal! gg
+
+    autocmd FileType json,xml set tabstop=2 shiftwidth=2 enc=utf8
     autocmd FileType ruby,eruby set filetype=ruby.eruby.chef
+
+    au BufReadCmd *.jar,*.xpi, *.docx, *.nupkg call zip#Browse(expand("<amatch>"))
 augroup END
 
 if has('gui') && (has('win32') || has('win64'))
