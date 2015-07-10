@@ -10,6 +10,9 @@ nnoremap <silent> <SPACE> <SPACE>:noh<CR>
 vnoremap > >gv
 vnoremap < <gv
 
+inoremap <S-CR> <ESC>
+inoremap <C-CR> <ESC>
+
 let s:cmd = 'nnoremap <leader>eg :e ' . s:thisPath . '<cr>'
 execute s:cmd
 
