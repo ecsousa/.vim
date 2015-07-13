@@ -13,6 +13,16 @@ vnoremap < <gv
 inoremap <S-CR> <ESC>
 inoremap <C-CR> <ESC>
 
+nnoremap " '
+vnoremap " '
+onoremap " '
+nnoremap ' "
+vnoremap ' "
+
+if has('win32') || has('win64')
+  noremap <C-V>		"+gP
+endif
+
 let s:cmd = 'nnoremap <leader>eg :e ' . s:thisPath . '<cr>'
 execute s:cmd
 
