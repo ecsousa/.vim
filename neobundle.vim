@@ -26,6 +26,7 @@ NeoBundle 'honza/vim-snippets'
 NeoBundle 'tommcdo/vim-exchange'
 NeoBundle 'michaeljsmith/vim-indent-object'
 NeoBundle 'diepm/vim-rest-console'
+NeoBundle 'moll/vim-node'
 
 " Chef stuff
 " NeoBundle 'MarcWeber/vim-addon-mw-utils'
