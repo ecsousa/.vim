@@ -28,6 +28,9 @@ NeoBundle 'michaeljsmith/vim-indent-object'
 NeoBundle 'diepm/vim-rest-console'
 NeoBundle 'evanmiller/nginx-vim-syntax'
 NeoBundle 'moll/vim-node'
+NeoBundle 'walm/jshint.vim'
+NeoBundle 'vim-jsbeautify'
+NeoBundle 'myhere/vim-nodejs-complete'
 
 " Chef stuff
 " NeoBundle 'MarcWeber/vim-addon-mw-utils'
