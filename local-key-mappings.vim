@@ -18,11 +18,17 @@ if exists("*unite#filters#matcher_default#use")
     call unite#filters#matcher_default#use(['matcher_fuzzy'])
 endif
 nnoremap <leader>u :<C-u>Unite -no-split<cr>
-nnoremap <leader>f :<C-u>Unite -no-split -buffer-name=files   -start-insert file<cr>
-nnoremap <leader>r :<C-u>Unite -no-split -buffer-name=mru     -start-insert file_mru<cr>
-nnoremap <leader>o :<C-u>Unite -no-split -buffer-name=outline -start-insert outline<cr>
+nnoremap <leader>f :<C-u>Unite -no-split -buffer-name=files file<cr>
+nnoremap <leader>r :<C-u>Unite -no-split -buffer-name=mru file_mru<cr>
+nnoremap <leader>o :<C-u>Unite -no-split -buffer-name=outline outline<cr>
 nnoremap <leader>y :<C-u>Unite -no-split -buffer-name=yank history/yank<cr>
 nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffer  buffer<cr>
+
+" Git Conflict merging
+nnoremap <leader>c /^\(<<<<<<<\|=======\|>>>>>>>\)$<CR>
+nnoremap <leader>mh ddndndd
+nnoremap <leader>mt dnddndd
+nnoremap <leader>gm :Gstatus<CR>/Unmerged<CR>:noh<CR>jj
 
 " Fugitive
 nnoremap <leader>gs :Gstatus<CR>
