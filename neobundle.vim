@@ -27,10 +27,10 @@ NeoBundle 'tommcdo/vim-exchange'
 NeoBundle 'michaeljsmith/vim-indent-object'
 NeoBundle 'diepm/vim-rest-console'
 NeoBundle 'evanmiller/nginx-vim-syntax'
-NeoBundle 'moll/vim-node'
+" NeoBundle 'ecsousa/vim-node', 'fix_netrw_gotofile'
 NeoBundle 'walm/jshint.vim'
 NeoBundle 'vim-jsbeautify'
-NeoBundle 'myhere/vim-nodejs-complete'
+NeoBundle 'ahayman/vim-nodejs-complete'
 
 " Chef stuff
 " NeoBundle 'MarcWeber/vim-addon-mw-utils'
@@ -42,9 +42,9 @@ if has('mac')
     NeoBundle 'rizzatti/dash.vim'
 endif
 
-"if (has('python'))
-"    NeoBundle 'OmniSharp/omnisharp-vim'
-"endif
+if (has('python'))
+    NeoBundle 'OmniSharp/omnisharp-vim'
+endif
 
 call neobundle#end()
 
