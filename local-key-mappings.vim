@@ -25,7 +25,7 @@ nnoremap <leader>y :<C-u>Unite -no-split -buffer-name=yank history/yank<cr>
 nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffer  buffer<cr>
 
 " Git Conflict merging
-nnoremap <leader>c /^\(<<<<<<<\|=======\|>>>>>>>\)$<CR>
+nnoremap <leader>c /^\(<<<<<<< \\|=======\\|>>>>>>> \)<CR>
 nnoremap <leader>mh ddndndd
 nnoremap <leader>mt dnddndd
 nnoremap <leader>gm :Gstatus<CR>/Unmerged<CR>:noh<CR>jj
