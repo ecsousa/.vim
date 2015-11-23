@@ -127,6 +127,9 @@ endif
 " Disable SnipMate snippets in UltiSnippets
 let g:UltiSnipsEnableSnipMate = 0
 
+" Set Vimfiler as defualt explorer
+:let g:vimfiler_as_default_explorer = 1
+
 "completely disable bells
 if has('gui')
     set noeb novb
