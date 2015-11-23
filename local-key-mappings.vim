@@ -12,6 +12,12 @@ nnoremap <TAB>f :tabfirst<CR>
 nnoremap <TAB>l :tablast<CR>
 nnoremap <TAB>x :tabclose<CR>
 
+" Vimgrep
+nnoremap <silent>[q :cprev<CR>
+nnoremap <silent>]q :cnext<CR>
+nnoremap <silent>[Q :cfirst<CR>
+nnoremap <silent>]Q :clast<CR>
+
 " Unite
 let g:unite_source_history_yank_enable = 1
 if exists("*unite#filters#matcher_default#use")
