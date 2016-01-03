@@ -10,7 +10,7 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'godlygeek/csapprox'
 NeoBundle 'kongo2002/fsharp-vim'
 NeoBundle 'tpope/vim-dispatch'
-NeoBundle 'bling/vim-airline'
+"NeoBundle 'bling/vim-airline'
 NeoBundle 'PProvost/vim-ps1'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
@@ -49,7 +49,7 @@ filetype plugin indent on
 
 NeoBundleCheck
 
-set laststatus=2
+set laststatus=0
 
 let s:thisPath = expand('<sfile>')
 let s:thisFile = expand('<sfile>:t')
