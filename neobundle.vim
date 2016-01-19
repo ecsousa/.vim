@@ -5,12 +5,11 @@ call neobundle#begin(s:plugins)
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'tmhedberg/matchit'
-NeoBundle 'kien/ctrlp.vim'
+"NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'godlygeek/csapprox'
 NeoBundle 'kongo2002/fsharp-vim'
 NeoBundle 'tpope/vim-dispatch'
-"NeoBundle 'bling/vim-airline'
 NeoBundle 'PProvost/vim-ps1'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
@@ -21,13 +20,16 @@ NeoBundle 'Shougo/unite-outline'
 NeoBundle 'fsharp/fsharpbinding', {'rtp': 'vim'}
 NeoBundle 'oblitum/rainbow'
 NeoBundle 'Shougo/vimfiler'
-NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'tommcdo/vim-exchange'
 NeoBundle 'michaeljsmith/vim-indent-object'
 NeoBundle 'diepm/vim-rest-console'
 NeoBundle 'evanmiller/nginx-vim-syntax'
 NeoBundle 'moll/vim-node'
+
+if has('lua')
+    NeoBundle 'Shougo/neocomplete.vim'
+endif
 
 " Chef stuff
 " NeoBundle 'MarcWeber/vim-addon-mw-utils'
@@ -39,9 +41,10 @@ if has('mac')
     NeoBundle 'rizzatti/dash.vim'
 endif
 
-"if (has('python'))
-"    NeoBundle 'OmniSharp/omnisharp-vim'
-"endif
+if (has('python'))
+    NeoBundle 'SirVer/ultisnips'
+    NeoBundle 'OmniSharp/omnisharp-vim'
+endif
 
 call neobundle#end()
 

@@ -104,11 +104,12 @@ augroup omnisharp_commands
     autocmd FileType cs nnoremap <buffer> <leader>tp :OmniSharpAddToProject<cr>
 
     " (Experimental - uses vim-dispatch or vimproc plugin) - Start the omnisharp server for the current solution
-    autocmd FileType cs nnoremap <buffer> <leader>ss :OmniSharpStartServer<cr>
-    autocmd FileType cs nnoremap <buffer> <leader>sp :OmniSharpStopServer<cr>
-
     " Add syntax highlighting for types and interfaces
     autocmd FileType cs nnoremap <buffer> <leader>th :OmniSharpHighlightTypes<cr>
 augroup END
+
+nnoremap <buffer> <leader>ss :OmniSharpStartServer<cr>
+nnoremap <buffer> <leader>sp :OmniSharpStopServer<cr>
+
 "Don't ask to save when changing buffers (i.e. when jumping to a type definition)
 set hidden

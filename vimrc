@@ -1,6 +1,9 @@
 set nocompatible
 "filetype off
 
+let g:OmniSharp_server_type = 'roslyn'
+let g:OmniSharp_selector_ui = 'unite'
+
 let mapleader = '-'
 
 if has("win32") || has("win16")
@@ -23,10 +26,12 @@ execute 'source' (s:thisPath . '/neobundle.vim')
 filetype plugin indent on
 "End NeoBundle
 
+execute 'source' (s:thisPath . '/neocomplete.vim')
+
 "Check OmniSharp load needed
-"if filereadable(s:thisPath . '/plugins/omnisharp-vim/server/OmniSharp/bin/Debug/OmniSharp.exe') && has('python')
-"    execute 'source' (s:thisPath . '/OmniSharp.vim')
-"endif
+if has('python')
+    execute 'source' (s:thisPath . '/OmniSharp.vim')
+endif
 
 execute 'source' (s:thisPath . '/global-key-mappings.vim')
 execute 'source' (s:thisPath . '/local-key-mappings.vim')
