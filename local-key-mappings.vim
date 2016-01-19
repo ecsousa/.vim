@@ -12,6 +12,12 @@ nnoremap <TAB>f :tabfirst<CR>
 nnoremap <TAB>l :tablast<CR>
 nnoremap <TAB>x :tabclose<CR>
 
+" Vimgrep
+nnoremap <silent>[q :cprev<CR>
+nnoremap <silent>]q :cnext<CR>
+nnoremap <silent>[Q :cfirst<CR>
+nnoremap <silent>]Q :clast<CR>
+
 " Unite
 let g:unite_source_history_yank_enable = 1
 if exists("*unite#filters#matcher_default#use")
@@ -23,6 +29,12 @@ nnoremap <leader>r :<C-u>Unite -no-split -buffer-name=mru file_mru<cr>
 nnoremap <leader>o :<C-u>Unite -no-split -buffer-name=outline outline<cr>
 nnoremap <leader>y :<C-u>Unite -no-split -buffer-name=yank history/yank<cr>
 nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffer  buffer<cr>
+
+" Git Conflict merging
+nnoremap <leader>c /^\(<<<<<<< \\|=======\\|>>>>>>> \)<CR>
+nnoremap <leader>mh ddndndd
+nnoremap <leader>mt dnddndd
+nnoremap <leader>gm :Gstatus<CR>/Unmerged<CR>:noh<CR>jj
 
 " Fugitive
 nnoremap <leader>gs :Gstatus<CR>

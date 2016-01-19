@@ -10,9 +10,6 @@ nnoremap <silent> <SPACE> <SPACE>:noh<CR>
 vnoremap > >gv
 vnoremap < <gv
 
-inoremap <S-CR> <ESC>
-inoremap <C-CR> <ESC>
-
 if has('win32') || has('win64')
   noremap <C-V>		"+gP
 endif

@@ -25,7 +25,10 @@ NeoBundle 'tommcdo/vim-exchange'
 NeoBundle 'michaeljsmith/vim-indent-object'
 NeoBundle 'diepm/vim-rest-console'
 NeoBundle 'evanmiller/nginx-vim-syntax'
-NeoBundle 'moll/vim-node'
+" NeoBundle 'ecsousa/vim-node', 'fix_netrw_gotofile'
+" NeoBundle 'walm/jshint.vim'
+" NeoBundle 'vim-jsbeautify'
+" NeoBundle 'ahayman/vim-nodejs-complete'
 
 if has('lua')
     NeoBundle 'Shougo/neocomplete.vim'
