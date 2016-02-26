@@ -6,6 +6,8 @@ call neobundle#begin(s:plugins)
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'tmhedberg/matchit'
 "NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'mxw/vim-jsx'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'godlygeek/csapprox'
 NeoBundle 'kongo2002/fsharp-vim'
