@@ -26,7 +26,7 @@ execute 'source' (s:thisPath . '/neobundle.vim')
 filetype plugin indent on
 "End NeoBundle
 
-execute 'source' (s:thisPath . '/neocomplete.vim')
+" execute 'source' (s:thisPath . '/neocomplete.vim')
 
 "Check OmniSharp load needed
 if has('python')
