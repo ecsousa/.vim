@@ -117,6 +117,8 @@ augroup MyVimrc
     autocmd FileType json,xml set tabstop=2 shiftwidth=2 enc=utf8
     autocmd FileType ruby,eruby set filetype=ruby.eruby.chef
 
+    autocmd FileType javascript,javascript.jsx set tabstop=2 shiftwidth=2
+
     au BufReadCmd *.jar,*.xpi, *.docx, *.nupkg call zip#Browse(expand("<amatch>"))
 augroup END
 
