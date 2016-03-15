@@ -8,7 +8,7 @@ NeoBundle 'tmhedberg/matchit'
 "NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'mxw/vim-jsx'
-NeoBundle 'scrooloose/syntastic'
+"NeoBundle 'scrooloose/syntastic'
 NeoBundle 'godlygeek/csapprox'
 NeoBundle 'kongo2002/fsharp-vim'
 NeoBundle 'tpope/vim-dispatch'
@@ -47,8 +47,8 @@ if has('mac')
 endif
 
 if (has('python'))
-    NeoBundle 'SirVer/ultisnips'
-    NeoBundle 'OmniSharp/omnisharp-vim'
+    "NeoBundle 'SirVer/ultisnips'
+    "NeoBundle 'OmniSharp/omnisharp-vim'
 endif
 
 call neobundle#end()

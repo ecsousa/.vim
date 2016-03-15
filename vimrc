@@ -30,7 +30,7 @@ filetype plugin indent on
 
 "Check OmniSharp load needed
 if has('python')
-    execute 'source' (s:thisPath . '/OmniSharp.vim')
+    " execute 'source' (s:thisPath . '/OmniSharp.vim')
 endif
 
 execute 'source' (s:thisPath . '/global-key-mappings.vim')
@@ -135,7 +135,8 @@ endif
 let g:UltiSnipsEnableSnipMate = 0
 
 " Set Vimfiler as defualt explorer
-:let g:vimfiler_as_default_explorer = 1
+let g:vimfiler_as_default_explorer = 1
+let g:jsx_ext_required = 0
 
 "completely disable bells
 if has('gui')
