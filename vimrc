@@ -110,6 +110,7 @@ augroup MyVimrc
     autocmd BufNewFile,BufRead *.build set ft=xml
     autocmd BufNewFile,BufRead *.wxi set ft=xml
     autocmd BufNewFile,BufRead *.wxs set ft=xml
+    autocmd BufNewFile,BufRead gitconfig set ft=gitconfig
 
     autocmd FileType gitcommit set enc=utf8 spell
     autocmd FileType gitcommit normal! gg
