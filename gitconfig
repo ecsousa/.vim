@@ -1,3 +1,15 @@
+## Include this code on .gitconfig:
+
+## Windows
+# [include]
+#     path=~/vimfiles/gitconfig
+#
+
+## *nix/osx
+# [include]
+#     path=~/.vim/gitconfig
+#
+
 [push]
 	default = simple
 
