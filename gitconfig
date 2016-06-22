@@ -16,4 +16,5 @@
 [alias]
 	l = log --oneline --decorate --abbrev-commit
 	lg = log --oneline --decorate --graph --abbrev-commit
-
+[branch]
+    autoSetupMerge = false
