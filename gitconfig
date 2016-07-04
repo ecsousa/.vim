@@ -19,5 +19,9 @@
     local-branch = rev-parse --abbrev-ref HEAD
     push-track = !git push -u origin `git local-branch`
     set-track = !git branch -u origin/`git local-branch`
+
+    config-gm = !git config user.name 'Eduardo Sousa' && git config user.email 'ecsousa@gmail.com'
+    config-ac = !git config user.name 'Eduardo Sousa' && git config user.email 'esousa@avenuecode.com'
+    config-gap = !git config user.name 'Eduardo Sousa' && git config user.email 'Eduardo_Sousa@gap.com'
 [branch]
     autoSetupMerge = false
