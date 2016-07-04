@@ -15,6 +15,9 @@
 
 [alias]
 	l = log --oneline --decorate --abbrev-commit
-	lg = log --oneline --decorate --graph --abbrev-commit
+    lg = log --oneline --decorate --graph --abbrev-commit
+    local-branch = rev-parse --abbrev-ref HEAD
+    push-track = !git push -u origin `git local-branch`
+    set-track = !git branch -u origin/`git local-branch`
 [branch]
     autoSetupMerge = false
