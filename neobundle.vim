@@ -32,6 +32,7 @@ NeoBundle 'evanmiller/nginx-vim-syntax'
 " NeoBundle 'vim-jsbeautify'
 " NeoBundle 'ahayman/vim-nodejs-complete'
 " NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'tpope/vim-unimpaired'
 
 if has('lua')
     NeoBundle 'Shougo/neocomplete.vim'
