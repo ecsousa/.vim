@@ -99,8 +99,6 @@ augroup MyVimrc
     autocmd BufNewFile,BufRead COMMIT_EDITMSG set ft=gitcommit
     autocmd BufNewFile,BufRead *.vb set ft=vbnet
     autocmd BufNewFile,BufRead *._ps1 set ft=ps1
-    autocmd BufNewFile,BufRead *.ps1 set ft=ps1
-    autocmd BufNewFile,BufRead *.psm1 set ft=ps1
     autocmd BufNewFile,BufRead *.msbuild set ft=xml
     autocmd BufNewFile,BufRead *.targets set ft=xml
     autocmd BufNewFile,BufRead *.properties set ft=xml

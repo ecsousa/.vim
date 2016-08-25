@@ -45,6 +45,9 @@ nnoremap <silent><leader>gb gg/^# On branch <CR>f f f  y$:noh<CR>ggPa:
 
 nnoremap <leader><tab> :VimFiler<CR>
 
+nnoremap <TAB><TAB> :NERDTreeFocus<CR>
+nnoremap <TAB><CR> :NERDTreeCWD<CR>
+
 " Use C-O for opening help, and C-] does not work with pt-br keyboard
 nnoremap <C-]> <C-]>
 
