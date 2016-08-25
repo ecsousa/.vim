@@ -119,6 +119,7 @@ augroup MyVimrc
     autocmd FileType javascript,javascript.jsx set tabstop=2 shiftwidth=2
 
     au BufReadCmd *.jar,*.xpi, *.docx, *.nupkg call zip#Browse(expand("<amatch>"))
+    au GUIEnter * simalt ~x
 augroup END
 
 if has('gui') && (has('win32') || has('win64'))
