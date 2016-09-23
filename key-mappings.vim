@@ -4,6 +4,15 @@
 let s:thisPath = expand('<sfile>')
 let s:thisFile = expand('<sfile>:t')
 
+vnoremap G G$
+nnoremap <silent> <SPACE> <SPACE>:noh<CR>
+
+vnoremap > >gv
+vnoremap < <gv
+
+if has('win32') || has('win64')
+  noremap <C-V>		"+gP
+endif
 
 nnoremap <TAB>t :tabnew<CR>
 nnoremap <TAB>n :tabn<CR>

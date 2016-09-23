@@ -33,8 +33,7 @@ if has('python')
     " execute 'source' (s:thisPath . '/OmniSharp.vim')
 endif
 
-execute 'source' (s:thisPath . '/global-key-mappings.vim')
-execute 'source' (s:thisPath . '/local-key-mappings.vim')
+execute 'source' (s:thisPath . '/key-mappings.vim')
 
 
 if !empty($CONEMUBUILD)
