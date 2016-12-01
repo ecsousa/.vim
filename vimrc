@@ -117,6 +117,8 @@ augroup MyVimrc
 
     autocmd FileType javascript,javascript.jsx set tabstop=2 shiftwidth=2
 
+    autocmd FileType markdown set spell
+
     au BufReadCmd *.jar,*.xpi, *.docx, *.nupkg call zip#Browse(expand("<amatch>"))
     au GUIEnter * simalt ~x
 augroup END
