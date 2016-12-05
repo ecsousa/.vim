@@ -13,14 +13,14 @@ function! UpdatePackageVersion(package, version)
     let @p = l:packagePattern
 
     exe 'Ggrep "' . l:packagePattern . '" **/packages.config'
-    exe 'Qfdo g/' . l:packagePattern .'/norm 2f= di""vP'
+    exe 'silent cdo norm 2f= di""vP'
 
     let l:packageQF = getqflist()
 
     let l:packagePattern = '<HintPath>.*' . l:packagePattern
 
     exe 'Ggrep "' . l:packagePattern . '" **/*.csproj'
-    exe 'Qfdo g/' . l:packagePattern . '/norm :let @/=@p' . l:cr . 'nf\' . (l:versionDots + 1) . 'T.dt\"vP'
+    exe 'silent cdo norm :let @/=@p' . l:cr . 'nf\' . (l:versionDots + 1) . 'T.dt\"vP'
 
     let l:projQF = getqflist()
 
