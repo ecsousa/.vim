@@ -32,5 +32,3 @@
 [grep]
     lineNumber = true
 
-[rerere]
-	enabled = 1
