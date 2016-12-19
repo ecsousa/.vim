@@ -113,7 +113,7 @@ augroup MyVimrc
     autocmd FileType gitcommit set enc=utf8 spell
     autocmd FileType gitcommit normal! gg
 
-    autocmd FileType json,xml set tabstop=2 shiftwidth=2 enc=utf8
+    autocmd FileType yaml,json,xml set tabstop=2 shiftwidth=2 enc=utf8
     autocmd FileType ruby,eruby set filetype=ruby.eruby.chef
 
     autocmd FileType javascript,javascript.jsx set tabstop=2 shiftwidth=2
