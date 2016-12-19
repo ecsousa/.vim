@@ -47,6 +47,7 @@ nnoremap <leader>gm :Gstatus<CR>/Unmerged<CR>:noh<CR>jj
 
 " Fugitive
 nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gaw :cfdo Gwrite<CR>
 nnoremap <leader>gw :Gwrite<CR>
 nnoremap <leader>gc :Gcommit<CR>
 nnoremap <leader>gd :Gdiff<CR>
