@@ -84,6 +84,7 @@ set expandtab
 set incsearch hlsearch
 set hidden
 set showcmd
+set scrolloff=0
 
 if has("win32") || has("win16")
     "use TEMP dir for swap in windows
