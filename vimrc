@@ -69,6 +69,8 @@ silent! nunmap <C-A>
 silent! nunmap <C-Y>
 silent! nunmap <C-X>
 
+"Map C-\ to C-], to fix issue with pt-br keyboard layout
+silent! nnoremap <C-\> <C-]>
 
 " use syntax highlight
 syntax on
