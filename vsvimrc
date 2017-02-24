@@ -28,3 +28,10 @@ vnoremap <C-X> "+x
 vnoremap <C-C> "+y
 map <C-V>		"+gP
 cmap <C-V>		<C-R>+
+
+nnoremap <C-J> <C-E>
+nnoremap <C-K> <C-Y>
+inoremap <C-J> <C-O><C-E>
+inoremap <C-K> <C-O><C-Y>
+
+nnoremap -a ggVG

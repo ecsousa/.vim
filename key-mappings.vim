@@ -7,12 +7,18 @@ let s:thisFile = expand('<sfile>:t')
 vnoremap G G$
 nnoremap <silent> <SPACE> <SPACE>:noh<CR>
 
+nnoremap <leader>a ggVG
 vnoremap > >gv
 vnoremap < <gv
 
 if has('win32') || has('win64')
   noremap <C-V>		"+gP
 endif
+
+nnoremap <C-J> <C-E>
+nnoremap <C-K> <C-Y>
+inoremap <C-J> <C-O><C-E>
+inoremap <C-K> <C-O><C-Y>
 
 nnoremap <TAB>t :tabnew<CR>
 nnoremap <TAB>n :tabn<CR>
