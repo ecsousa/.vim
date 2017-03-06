@@ -23,8 +23,8 @@ NeoBundle 'fsharp/fsharpbinding', {'rtp': 'vim'}
 NeoBundle 'oblitum/rainbow'
 NeoBundle 'Shougo/vimfiler'
 NeoBundle 'honza/vim-snippets'
-NeoBundle 'tommcdo/vim-exchange'
-"NeoBundle 'michaeljsmith/vim-indent-object'
+" NeoBundle 'tommcdo/vim-exchange'
+" NeoBundle 'michaeljsmith/vim-indent-object'
 NeoBundle 'diepm/vim-rest-console'
 NeoBundle 'evanmiller/nginx-vim-syntax'
 " NeoBundle 'ecsousa/vim-node', 'fix_netrw_gotofile'
@@ -34,9 +34,10 @@ NeoBundle 'evanmiller/nginx-vim-syntax'
 " NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'fatih/vim-go'
 
 if has('lua')
-    NeoBundle 'Shougo/neocomplete.vim'
+    " NeoBundle 'Shougo/neocomplete.vim'
 endif
 
 " Chef stuff
@@ -46,7 +47,7 @@ endif
 " NeoBundle 'vadv/vim-chef'
 
 if has('mac')
-    NeoBundle 'rizzatti/dash.vim'
+    " NeoBundle 'rizzatti/dash.vim'
 endif
 
 if (has('python'))
