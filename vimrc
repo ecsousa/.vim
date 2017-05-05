@@ -35,6 +35,12 @@ endif
 
 execute 'source' (s:thisPath . '/key-mappings.vim')
 
+if &term =~ '256color'
+    " disable Background Color Erase (BCE) so that color schemes
+    " render properly when inside 256-color tmux and GNU screen.
+    " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
+    set t_ut=
+endif
 
 if !empty($CONEMUBUILD)
   set term=xterm
@@ -43,10 +49,15 @@ if !empty($CONEMUBUILD)
   let &t_AF="\e[38;5;%dm"
   normal! a
 endif
-set t_Co=256
+if !has('gui') && (has('win32') || has('win64'))
+    set t_Co=256
+else
+    set termguicolors
+endif
 
 
 if filereadable(globpath(&rtp, 'colors/af.vim'))
+    set background=dark
     colo af
 else
     colo torte
@@ -129,7 +140,9 @@ augroup MyVimrc
     autocmd FileType markdown set spell
 
     au BufReadCmd *.jar,*.xpi, *.docx, *.nupkg call zip#Browse(expand("<amatch>"))
-    au GUIEnter * simalt ~x
+    if has('gui') && (has('win32') || has('win64'))
+        au GUIEnter * simalt ~x
+    endif
 augroup END
 
 if has('gui') && (has('win32') || has('win64'))
@@ -149,7 +162,7 @@ let g:vimfiler_as_default_explorer = 1
 let g:jsx_ext_required = 0
 
 "completely disable bells
-if has('gui')
+if has('gui') && (has('win32') || has('win64'))
     set noeb novb
 else
     set noeb vb t_vb=
