@@ -103,7 +103,6 @@ set nofixeol
 set backspace=indent,eol,start
 set completeopt=menu
 
-
 if has("win32") || has("win16")
     "use TEMP dir for swap in windows
     set directory=%TEMP%

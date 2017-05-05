@@ -57,6 +57,7 @@ nnoremap <leader>gaw :cfdo Gwrite<CR>
 nnoremap <leader>gw :Gwrite<CR>
 nnoremap <leader>gc :Gcommit<CR>
 nnoremap <leader>gd :Gdiff<CR>
+" nnoremap <silent><leader>gb gg/^# On branch <CR>f f f  y$:noh<CR>ggPa: 
 nnoremap <silent><leader>gb :let b:hlsearch=&hlsearch<CR>:let &hlsearch=0<CR>gg/^# On branch<CR>3wy$ggO<C-R>0: <ESC>:s/\(.*\/\)\?\(.\)/\2<CR>:let @/=''<CR>:let &hlsearch=b:hlsearch<CR>y$ddI<C-R>0
 
 nnoremap <leader><tab> :VimFiler<CR>

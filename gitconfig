@@ -26,8 +26,14 @@
     config-ac = !git config user.name 'Eduardo Sousa' && git config user.email 'esousa@avenuecode.com'
     config-gap = !git config user.name 'Eduardo Sousa' && git config user.email 'Eduardo_Sousa@gap.com'
 
+    feature = flow feature
+    hotfix = flow hotfix
+    support = flow support
+    bugfix = flow bugfix
+    release = flow release
+
 [branch]
-    autoSetupMerge = false
+    # autoSetupMerge = false
 
 [grep]
     lineNumber = true
