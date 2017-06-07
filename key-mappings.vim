@@ -15,6 +15,8 @@ if has('win32') || has('win64')
   noremap <C-V>		"+gP
 endif
 
+vnoremap -2 :norm @
+
 nnoremap <C-J> <C-E>
 nnoremap <C-K> <C-Y>
 inoremap <C-J> <C-O><C-E>
