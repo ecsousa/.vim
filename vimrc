@@ -138,7 +138,7 @@ augroup MyVimrc
 
     autocmd FileType markdown set spell
 
-    au BufReadCmd *.jar,*.xpi, *.docx, *.nupkg call zip#Browse(expand("<amatch>"))
+    au BufReadCmd *.jar,*.xpi,*.docx,*.nupkg call zip#Browse(expand("<amatch>"))
     if has('gui') && (has('win32') || has('win64'))
         au GUIEnter * simalt ~x
     endif
