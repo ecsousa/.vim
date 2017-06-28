@@ -35,24 +35,27 @@ endif
 
 execute 'source' (s:thisPath . '/key-mappings.vim')
 
-if &term =~ '256color'
-    " disable Background Color Erase (BCE) so that color schemes
-    " render properly when inside 256-color tmux and GNU screen.
-    " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
-    set t_ut=
-endif
+if !has('nvim')
 
-if !empty($CONEMUBUILD)
-  set term=xterm
-  set termencoding=utf8
-  let &t_AB="\e[48;5;%dm"
-  let &t_AF="\e[38;5;%dm"
-  normal! a
-endif
-if !has('gui') && (has('win32') || has('win64'))
-    set t_Co=256
-else
-    set termguicolors
+    if &term =~ '256color'
+        " disable Background Color Erase (BCE) so that color schemes
+        " render properly when inside 256-color tmux and GNU screen.
+        " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
+        set t_ut=
+    endif
+
+    if !empty($CONEMUBUILD)
+      set term=xterm
+      set termencoding=utf8
+      let &t_AB="\e[48;5;%dm"
+      let &t_AF="\e[38;5;%dm"
+      normal! a
+    endif
+    if !has('gui') && (has('win32') || has('win64'))
+        set t_Co=256
+    else
+        set termguicolors
+    endif
 endif
 
 
@@ -63,16 +66,19 @@ else
     colo torte
 endif
 
-" setup gui interface
-if has("gui_running")
-    "Force menu to english
-    source $VIMRUNTIME/delmenu.vim
-    set langmenu=none
-    let do_syntax_sel_menu = 1
-    source $VIMRUNTIME/menu.vim
 
-    set guioptions-=T "remove toolbar
-    set guioptions-=m "remove menu
+" setup gui interface
+if !has('nvim')
+    if has("gui_running")
+        "Force menu to english
+        source $VIMRUNTIME/delmenu.vim
+        set langmenu=none
+        let do_syntax_sel_menu = 1
+        source $VIMRUNTIME/menu.vim
+
+        set guioptions-=T "remove toolbar
+        set guioptions-=m "remove menu
+    endif
 endif
 
 "Enable CTRL-A, CTRL-Y and CTRL-X

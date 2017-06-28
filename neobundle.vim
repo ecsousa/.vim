@@ -9,7 +9,7 @@ NeoBundle 'tmhedberg/matchit'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'mxw/vim-jsx'
 "NeoBundle 'scrooloose/syntastic'
-if !has('gui') && (has('win32') || has('win64'))
+if !has('gui') && !has('nvim') && (has('win32') || has('win64'))
     NeoBundle 'godlygeek/csapprox'
 endif
 NeoBundle 'kongo2002/fsharp-vim'
@@ -61,7 +61,9 @@ call neobundle#end()
 
 filetype plugin indent on
 
-NeoBundleCheck
+if !has('nvim')
+    NeoBundleCheck
+endif
 
 set laststatus=0
 
