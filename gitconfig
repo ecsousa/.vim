@@ -32,6 +32,12 @@
     bugfix = flow bugfix
     release = flow release
 
+    ck = "!f() { \
+        FULL_NAME=$(git branch -r | grep \"\\/$1\\$\" | head -n 1 -) ; \
+        BRANCH_NAME=$(echo \"$FULL_NAME\" | sed -e 's/^[^\\/]*\\///'); \
+        git checkout \"${BRANCH_NAME}\"; \
+        }; f"
+
 [branch]
     # autoSetupMerge = false
 
