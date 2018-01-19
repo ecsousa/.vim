@@ -8,7 +8,7 @@ NeoBundle 'tmhedberg/matchit'
 "NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'mxw/vim-jsx'
-"NeoBundle 'scrooloose/syntastic'
+NeoBundle 'scrooloose/syntastic'
 if !has('gui') && !has('nvim') && (has('win32') || has('win64'))
     NeoBundle 'godlygeek/csapprox'
 endif
@@ -18,7 +18,7 @@ NeoBundle 'PProvost/vim-ps1'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'flazz/vim-colorschemes'
+" NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'vim-scripts/ScrollColors'
 NeoBundle 'Shougo/unite-outline'
 NeoBundle 'fsharp/fsharpbinding', {'rtp': 'vim'}
@@ -37,6 +37,8 @@ NeoBundle 'evanmiller/nginx-vim-syntax'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'fatih/vim-go'
+NeoBundle 'martinda/Jenkinsfile-vim-syntax'
+NeoBundle 'chriskempson/base16-vim'
 
 if has('lua')
     " NeoBundle 'Shougo/neocomplete.vim'
@@ -54,7 +56,7 @@ endif
 
 if (has('python'))
     "NeoBundle 'SirVer/ultisnips'
-    "NeoBundle 'OmniSharp/omnisharp-vim'
+    " NeoBundle 'OmniSharp/omnisharp-vim'
 endif
 
 call neobundle#end()

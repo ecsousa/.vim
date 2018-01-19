@@ -2,6 +2,8 @@ set nocompatible
 "filetype off
 
 let g:OmniSharp_server_type = 'roslyn'
+let g:OmniSharp_prefer_global_sln = 0
+let g:OmniSharp_timeout = 10
 let g:OmniSharp_selector_ui = 'unite'
 
 let mapleader = '-'
@@ -50,6 +52,7 @@ if !has('nvim')
       let &t_AB="\e[48;5;%dm"
       let &t_AF="\e[38;5;%dm"
       normal! a
+      set termguicolors
     endif
     if !has('gui') && (has('win32') || has('win64'))
         set t_Co=256
@@ -59,9 +62,10 @@ if !has('nvim')
 endif
 
 
-if filereadable(globpath(&rtp, 'colors/af.vim'))
+if filereadable(globpath(&rtp, 'colors/base16-default-dark.vim'))
     set background=dark
-    colo af
+    let base16colorspace=256 
+    colo base16-default-dark
 else
     colo torte
 endif
@@ -151,6 +155,14 @@ augroup MyVimrc
 augroup END
 
 if has('gui') && (has('win32') || has('win64'))
+    unmap <C-F>
+    iunmap <C-F>
+    cunmap <C-F>
+    unmap <C-H>
+    iunmap <C-H>
+    cunmap <C-H>
+
+
     set encoding=utf8
     "let g:airline_powerline_fonts = 1
     set guifont=Consolas:h12:cANSI
