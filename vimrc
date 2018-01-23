@@ -62,10 +62,16 @@ if !has('nvim')
 endif
 
 
-if filereadable(globpath(&rtp, 'colors/base16-default-dark.vim'))
+if filereadable(globpath(&rtp, 'colors/badwolf.vim'))
     set background=dark
-    let base16colorspace=256 
-    colo base16-default-dark
+    " let base16colorspace=256 
+    " colo base16-default-dark
+	let g:badwolf_darkgutter = 1
+	let g:badwolf_tabline = 3
+	let g:badwolf_html_link_underline = 0
+	let g:badwolf_css_props_highlight = 1
+
+	colo badwolf
 else
     colo torte
 endif
@@ -112,6 +118,8 @@ set scrolloff=0
 set nofixeol
 set backspace=indent,eol,start
 set completeopt=menu
+
+let NERDTreeQuitOnOpen=1
 
 if has("win32") || has("win16")
     "use TEMP dir for swap in windows

@@ -39,6 +39,7 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'fatih/vim-go'
 NeoBundle 'martinda/Jenkinsfile-vim-syntax'
 NeoBundle 'chriskempson/base16-vim'
+NeoBundle 'sjl/badwolf'
 
 if has('lua')
     " NeoBundle 'Shougo/neocomplete.vim'
@@ -79,7 +80,7 @@ augroup VundleMappings
     autocmd!
 
     let s:cmd = 'autocmd BufWritePost ' . s:thisFile . ' :source ' . s:thisPath
-    execute s:cmd
+	execute s:cmd
 
 augroup END
 
