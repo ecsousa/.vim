@@ -40,6 +40,7 @@ NeoBundle 'fatih/vim-go'
 NeoBundle 'martinda/Jenkinsfile-vim-syntax'
 NeoBundle 'chriskempson/base16-vim'
 NeoBundle 'sjl/badwolf'
+NeoBundle 'lambdalisue/vim-manpager'
 
 if has('lua')
     " NeoBundle 'Shougo/neocomplete.vim'
