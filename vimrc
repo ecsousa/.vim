@@ -1,10 +1,4 @@
 set nocompatible
-"filetype off
-
-let g:OmniSharp_server_type = 'roslyn'
-let g:OmniSharp_prefer_global_sln = 0
-let g:OmniSharp_timeout = 10
-let g:OmniSharp_selector_ui = 'unite'
 
 let mapleader = '-'
 
@@ -28,23 +22,14 @@ execute 'source' (s:thisPath . '/neobundle.vim')
 filetype plugin indent on
 "End NeoBundle
 
-" execute 'source' (s:thisPath . '/neocomplete.vim')
-
 "Check OmniSharp load needed
-if has('python')
+if has('python') && filereadable($OMNISHARP_PATH)
     " execute 'source' (s:thisPath . '/OmniSharp.vim')
 endif
 
 execute 'source' (s:thisPath . '/key-mappings.vim')
 
 if !has('nvim')
-
-    if &term =~ '256color'
-        " disable Background Color Erase (BCE) so that color schemes
-        " render properly when inside 256-color tmux and GNU screen.
-        " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
-        set t_ut=
-    endif
 
     if !empty($CONEMUBUILD)
       set term=xterm
@@ -59,13 +44,20 @@ if !has('nvim')
     else
         set termguicolors
     endif
+
+    if &term =~ '256color'
+        " disable Background Color Erase (BCE) so that color schemes
+        " render properly when inside 256-color tmux and GNU screen.
+        " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
+        set t_ut=
+    endif
+
 endif
 
 
 if filereadable(globpath(&rtp, 'colors/badwolf.vim'))
+    set t_ut=
     set background=dark
-    " let base16colorspace=256 
-    " colo base16-default-dark
 	let g:badwolf_darkgutter = 1
 	let g:badwolf_tabline = 3
 	let g:badwolf_html_link_underline = 0
@@ -119,7 +111,7 @@ set nofixeol
 set backspace=indent,eol,start
 set completeopt=menu
 
-let NERDTreeQuitOnOpen=1
+" let NERDTreeQuitOnOpen=1
 
 if has("win32") || has("win16")
     "use TEMP dir for swap in windows
@@ -144,6 +136,7 @@ augroup MyVimrc
     autocmd BufNewFile,BufRead *.build set ft=xml
     autocmd BufNewFile,BufRead *.wxi set ft=xml
     autocmd BufNewFile,BufRead *.wxs set ft=xml
+    autocmd BufNewFile,BufRead **/.kube/config set ft=yaml
     autocmd BufNewFile,BufRead gitconfig set ft=gitconfig
 
     autocmd FileType gitcommit set enc=utf8 spell
