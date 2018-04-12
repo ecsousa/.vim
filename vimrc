@@ -24,7 +24,7 @@ filetype plugin indent on
 
 "Check OmniSharp load needed
 if has('python') && filereadable($OMNISHARP_PATH)
-    " execute 'source' (s:thisPath . '/OmniSharp.vim')
+    execute 'source' (s:thisPath . '/OmniSharp.vim')
 endif
 
 execute 'source' (s:thisPath . '/key-mappings.vim')
