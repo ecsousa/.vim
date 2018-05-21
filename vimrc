@@ -17,6 +17,10 @@ let s:thisPath = expand('<sfile>:h')
 "Set NeoBundle at runtimepath
 execute ('set rtp+=' . s:thisPath . '/plugins/neobundle.vim/')
 
+if has('python') && filereadable($OMNISHARP_PATH)
+    let g:OmniSharp_server_path = $OMNISHARP_PATH
+endif
+
 "Load NeoBundle
 execute 'source' (s:thisPath . '/neobundle.vim')
 filetype plugin indent on
