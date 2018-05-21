@@ -35,15 +35,15 @@ execute 'source' (s:thisPath . '/key-mappings.vim')
 
 if !has('nvim')
 
-    if !empty($CONEMUBUILD)
-      set term=xterm
-      set termencoding=utf8
-      let &t_AB="\e[48;5;%dm"
-      let &t_AF="\e[38;5;%dm"
-      normal! a
-      set termguicolors
-    endif
     if !has('gui') && (has('win32') || has('win64'))
+        if !empty($CONEMUBUILD)
+            set term=xterm
+            set termencoding=utf8
+            let &t_AB="\e[48;5;%dm"
+            let &t_AF="\e[38;5;%dm"
+            normal! a
+            set termguicolors
+        endif
         set t_Co=256
     else
         set termguicolors
@@ -88,9 +88,9 @@ if !has('nvim')
 endif
 
 "Enable CTRL-A, CTRL-Y and CTRL-X
-silent! nunmap <C-A>
-silent! nunmap <C-Y>
-silent! nunmap <C-X>
+"silent! nunmap <C-A>
+"silent! nunmap <C-Y>
+"silent! nunmap <C-X>
 
 "Map C-\ to C-], to fix issue with pt-br keyboard layout
 silent! nnoremap <C-\> <C-]>
@@ -159,15 +159,31 @@ augroup MyVimrc
     endif
 augroup END
 
-if has('gui') && (has('win32') || has('win64'))
-    unmap <C-F>
+if mapcheck("<C-F>", "n")
+    nunmap <C-F>
+endif
+
+if mapcheck("<C-F>", "i")
     iunmap <C-F>
+endif
+
+if mapcheck("<C-F>", "c")
     cunmap <C-F>
-    unmap <C-H>
+endif
+
+if mapcheck("<C-H>", "n")
+    nunmap <C-H>
+endif
+
+if mapcheck("<C-H>", "i")
     iunmap <C-H>
+endif
+
+if mapcheck("<C-H>", "c")
     cunmap <C-H>
+endif
 
-
+if has('gui') && (has('win32') || has('win64'))
     set encoding=utf8
     "let g:airline_powerline_fonts = 1
     set guifont=Consolas:h12:cANSI
