@@ -4,6 +4,7 @@ let s:plugins = s:thisLocaltion . '/plugins'
 call neobundle#begin(s:plugins)
 
 NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'mxw/vim-jsx'
 NeoBundle 'scrooloose/syntastic'
@@ -20,6 +21,7 @@ NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'martinda/Jenkinsfile-vim-syntax'
 NeoBundle 'sjl/badwolf'
+NeoBundle 'kien/ctrlp.vim'
 
 if has('python') && filereadable($OMNISHARP_PATH)
     NeoBundle 'OmniSharp/omnisharp-vim'

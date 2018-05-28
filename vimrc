@@ -87,11 +87,6 @@ if !has('nvim')
     endif
 endif
 
-"Enable CTRL-A, CTRL-Y and CTRL-X
-"silent! nunmap <C-A>
-"silent! nunmap <C-Y>
-"silent! nunmap <C-X>
-
 "Map C-\ to C-], to fix issue with pt-br keyboard layout
 silent! nnoremap <C-\> <C-]>
 
@@ -159,29 +154,42 @@ augroup MyVimrc
     endif
 augroup END
 
-if mapcheck("<C-F>", "n")
+if mapcheck("<C-F>", "n") != ""
     nunmap <C-F>
 endif
 
-if mapcheck("<C-F>", "i")
+if mapcheck("<C-F>", "i") != ""
     iunmap <C-F>
 endif
 
-if mapcheck("<C-F>", "c")
+if mapcheck("<C-F>", "c") != ""
     cunmap <C-F>
 endif
 
-if mapcheck("<C-H>", "n")
+if mapcheck("<C-H>", "n") != ""
     nunmap <C-H>
 endif
 
-if mapcheck("<C-H>", "i")
+if mapcheck("<C-H>", "i") != ""
     iunmap <C-H>
 endif
 
-if mapcheck("<C-H>", "c")
+if mapcheck("<C-H>", "c") != ""
     cunmap <C-H>
 endif
+
+if mapcheck("<C-A>", "n") != ""
+    nunmap <C-A>
+endif
+
+if mapcheck("<C-Y>", "n") != ""
+    nunmap <C-Y>
+endif
+
+if mapcheck("<C-X>", "n") != ""
+    nunmap <C-X>
+endif
+
 
 if has('gui') && (has('win32') || has('win64'))
     set encoding=utf8
