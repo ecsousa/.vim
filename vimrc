@@ -109,12 +109,18 @@ set scrolloff=0
 set nofixeol
 set backspace=indent,eol,start
 set completeopt=menu
+set laststatus=2
 
 " let NERDTreeQuitOnOpen=1
 
 if has("win32") || has("win16")
     "use TEMP dir for swap in windows
     set directory=%TEMP%
+
+    let s:curlrc = expand('~/.curlrc')
+    if filereadable(s:curlrc)
+        let g:netrw_http_xcmd = '-K' . s:curlrc . ' -o'
+    endif
 endif
 
 " key mappings

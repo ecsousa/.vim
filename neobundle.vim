@@ -7,7 +7,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'mxw/vim-jsx'
-NeoBundle 'scrooloose/syntastic'
 if !has('gui') && !has('nvim') && (has('win32') || has('win64'))
     NeoBundle 'godlygeek/csapprox'
 endif
@@ -22,6 +21,9 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'martinda/Jenkinsfile-vim-syntax'
 NeoBundle 'sjl/badwolf'
 NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'wellle/targets.vim'
+NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'moll/vim-node'
 
 if has('python') && filereadable($OMNISHARP_PATH)
     NeoBundle 'OmniSharp/omnisharp-vim'
