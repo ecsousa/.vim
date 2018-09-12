@@ -24,8 +24,7 @@ endif
 "Load NeoBundle
 execute 'source' (s:thisPath . '/neobundle.vim')
 filetype plugin indent on
-"End NeoBundle
-
+"End NeoBundle 
 "Check OmniSharp load needed
 if has('python') && filereadable($OMNISHARP_PATH)
     execute 'source' (s:thisPath . '/OmniSharp.vim')
@@ -197,13 +196,14 @@ if mapcheck("<C-X>", "n") != ""
 endif
 
 
-if has('gui') && (has('win32') || has('win64'))
-    set encoding=utf8
-    "let g:airline_powerline_fonts = 1
-    set guifont=Consolas:h12:cANSI
-"elseif empty($CONEMUBUILD)
-    "Airline fonts wont work on ConEmu
-    "let g:airline_powerline_fonts = 1
+if has('gui')
+    if (has('win32') || has('win64'))
+        set encoding=utf8
+        "let g:airline_powerline_fonts = 1
+        set guifont=Consolas:h12:cANSI
+    else 
+        set guifont=Monospace\ 13
+    endif
 endif
 
 " Disable SnipMate snippets in UltiSnippets
