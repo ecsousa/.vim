@@ -109,6 +109,7 @@ set nofixeol
 set backspace=indent,eol,start
 set completeopt=menu
 set laststatus=2
+set clipboard=
 
 " let NERDTreeQuitOnOpen=1
 
