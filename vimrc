@@ -14,17 +14,16 @@ endif
 
 let s:thisPath = expand('<sfile>:h')
 
-"Set NeoBundle at runtimepath
-execute ('set rtp+=' . s:thisPath . '/plugins/neobundle.vim/')
+"Set Dein at runtimepath
+execute ('set rtp+=' . s:thisPath . '/dein/')
 
 if has('python') && filereadable($OMNISHARP_PATH)
     let g:OmniSharp_server_path = $OMNISHARP_PATH
 endif
 
-"Load NeoBundle
-execute 'source' (s:thisPath . '/neobundle.vim')
-filetype plugin indent on
-"End NeoBundle
+"Load Dein
+execute 'source' (s:thisPath . '/Dein.vim')
+"End Dein
 
 "Check OmniSharp load needed
 if has('python') && filereadable($OMNISHARP_PATH)
