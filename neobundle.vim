@@ -7,7 +7,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'mxw/vim-jsx'
-if !has('gui') && !has('nvim') && (has('win32') || has('win64'))
+if !has('gui') && !has('nvim') && (has('win32') || has('win64') || v:version < 800)
     NeoBundle 'godlygeek/csapprox'
 endif
 NeoBundle 'kongo2002/fsharp-vim'

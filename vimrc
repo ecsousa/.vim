@@ -41,11 +41,15 @@ if !has('nvim')
             let &t_AB="\e[48;5;%dm"
             let &t_AF="\e[38;5;%dm"
             normal! a
-            set termguicolors
+            if v:version >= 800
+                set termguicolors
+            endif
         endif
         set t_Co=256
     else
-        set termguicolors
+        if v:version >= 800
+            set termguicolors
+        endif
     endif
 
     if &term =~ '256color'
@@ -105,7 +109,9 @@ set incsearch hlsearch
 set hidden
 set showcmd
 set scrolloff=0
-set nofixeol
+if v:version >= 800
+    set nofixeol
+endif
 set backspace=indent,eol,start
 set completeopt=menu
 set laststatus=2
