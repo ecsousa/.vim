@@ -70,7 +70,7 @@ if filereadable(globpath(&rtp, 'colors/badwolf.vim'))
 	let g:badwolf_html_link_underline = 0
 	let g:badwolf_css_props_highlight = 1
 
-	colo badwolf
+	colo wombat
 else
     colo torte
 endif
@@ -226,6 +226,10 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
+
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
 
 "completely disable bells
 if has('gui') && (has('win32') || has('win64'))
