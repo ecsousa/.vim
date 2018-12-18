@@ -23,7 +23,7 @@ NeoBundle 'sjl/badwolf'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'wellle/targets.vim'
 NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'moll/vim-node'
+"NeoBundle 'moll/vim-node'
 
 if has('python') && filereadable($OMNISHARP_PATH)
     NeoBundle 'OmniSharp/omnisharp-vim'
