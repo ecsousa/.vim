@@ -1,9 +1,10 @@
 set nocompatible
 
 let mapleader = '-'
+let s:thisPath = expand('<sfile>:h')
 
-if has("win32") || has("win16")
-    let s:baseVimrc = expand('$VIM/_vimrc')
+if has("win32")
+    let s:baseVimrc = expand(s:thisPath . '/windows.vim')
 else
     let s:baseVimrc = expand('$VIM/.vimrc')
 endif
@@ -11,8 +12,6 @@ endif
 if filereadable(s:baseVimrc)
     execute 'source' s:baseVimrc
 endif
-
-let s:thisPath = expand('<sfile>:h')
 
 "Set NeoBundle at runtimepath
 execute ('set rtp+=' . s:thisPath . '/plugins/neobundle.vim/')
