@@ -69,7 +69,7 @@ if filereadable(globpath(&rtp, 'colors/badwolf.vim'))
 	let g:badwolf_html_link_underline = 0
 	let g:badwolf_css_props_highlight = 1
 
-	colo wombat
+	colo jellybeans
 else
     colo torte
 endif
@@ -227,7 +227,7 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'jellybeans',
       \ }
 
 "completely disable bells
