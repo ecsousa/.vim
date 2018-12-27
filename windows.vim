@@ -30,3 +30,18 @@ function MyDiff()
     let &shellxquote=l:shxq_sav
   endif
 endfunction
+
+"use TEMP dir for swap in windows
+set directory=%TEMP%
+
+let s:curlrc = expand('~/.curlrc')
+if filereadable(s:curlrc)
+    let g:netrw_http_xcmd = '-K' . s:curlrc . ' -o'
+endif
+
+if has('gui')
+    set encoding=utf8
+    "let g:airline_powerline_fonts = 1
+    set guifont=Consolas:h12:cANSI
+    set noeb novb
+endif

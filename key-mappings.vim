@@ -1,9 +1,24 @@
-"My custom key mappings
-"NOT TO be used by vim and VsVim
+"Map C-\ to C-], to fix issue with pt-br keyboard layout
+silent! nnoremap <C-\> <C-]>
 
-let s:thisPath = expand('<sfile>')
-let s:thisFile = expand('<sfile>:t')
+" Delete mappings
+function! ForceUnmap(map, mode)
+    if mapcheck(a:map, a:mode) != ""
+        execute (a:mode . 'unmap ' . a:map)
+    endif
+endfunction
 
+call ForceUnmap("<C-F>", "n")
+call ForceUnmap("<C-F>", "i")
+call ForceUnmap("<C-F>", "c")
+call ForceUnmap("<C-H>", "n")
+call ForceUnmap("<C-H>", "i")
+call ForceUnmap("<C-H>", "c")
+call ForceUnmap("<C-A>", "n")
+call ForceUnmap("<C-Y>", "n")
+call ForceUnmap("<C-X>", "n")
+
+"My mappings
 vnoremap G G$
 nnoremap <silent> <SPACE> <SPACE>:noh<CR>
 
@@ -11,11 +26,6 @@ nnoremap <leader>a ggVG
 vnoremap > >gv
 vnoremap < <gv
 
-if has('win32') || has('win64')
-  noremap <C-V>		"+gP
-endif
-
-vnoremap -2 :norm @
 
 nnoremap <C-J> <C-E>
 nnoremap <C-K> <C-Y>
@@ -29,11 +39,6 @@ nnoremap <TAB>f :tabfirst<CR>
 nnoremap <TAB>l :tablast<CR>
 nnoremap <TAB>x :tabclose<CR>
 
-" Vimgrep
-nnoremap <silent>[q :cprev<CR>
-nnoremap <silent>]q :cnext<CR>
-nnoremap <silent>[Q :cfirst<CR>
-nnoremap <silent>]Q :clast<CR>
 
 " Unite
 let g:unite_source_history_yank_enable = 1
@@ -41,29 +46,15 @@ if exists("*unite#filters#matcher_default#use")
     call unite#filters#matcher_default#use(['matcher_fuzzy'])
 endif
 nnoremap <leader>u :<C-u>Unite -no-split<cr>
-nnoremap <leader>ff :<C-u>Unite -no-split -buffer-name=files file<cr>
-nnoremap <leader>r :<C-u>Unite -no-split -buffer-name=mru file_mru<cr>
 nnoremap <leader>o :<C-u>Unite -no-split -buffer-name=outline outline<cr>
-nnoremap <leader>y :<C-u>Unite -no-split -buffer-name=yank history/yank<cr>
 nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffer  buffer<cr>
 
 " Git Conflict merging
 nnoremap <leader>c :let @/='^\(<<<<<<< \\|=======\\|>>>>>>> \)'<CR>
-nnoremap <leader>mh ddndndd
-nnoremap <leader>mt dnddndd
-nnoremap <leader>gm :Gstatus<CR>/Unmerged<CR>:noh<CR>jj
 
 " Fugitive
 nnoremap <leader>gs :Gstatus<CR>
-nnoremap <leader>gaw :cfdo Gwrite<CR>
-nnoremap <leader>gw :Gwrite<CR>
-nnoremap <leader>gc :Gcommit<CR>
-nnoremap <leader>gd :Gdiff<CR>
-" nnoremap <silent><leader>gb gg/^# On branch <CR>f f f  y$:noh<CR>ggPa: 
-" nnoremap <silent><leader>gb :let b:hlsearch=&hlsearch<CR>:let &hlsearch=0<CR>gg/^# On branch<CR>3wy$ggO<C-R>0: <ESC>:s/\(.*\/\)\?\(.\)/\2<CR>:let @/=''<CR>:let &hlsearch=b:hlsearch<CR>y$ddI<C-R>0
 noremap <silent><leader>gb :let b:hlsearch=&hlsearch<CR>:let &hlsearch=0<CR>gg/^# On branch<CR>3wy$ggO<C-R>0: <ESC>:s/\(.*\/\)\?\([^_]*\)\(_[^:]*\)\?/\2<CR>:let @/=''<CR>:let &hlsearch=b:hlsearch<CR>y$ddI<C-R>0
-
-nnoremap <leader><tab> :VimFiler<CR>
 
 nnoremap <TAB><TAB> :NERDTreeFocus<CR>
 nnoremap <TAB><CR> :NERDTreeCWD<CR>
@@ -93,14 +84,13 @@ function! s:unite_settings()
     imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
 endfunction
 
-let s:cmd = 'nnoremap <leader>el :e ' . s:thisPath . '<cr>'
+let s:cmd = 'nnoremap <leader>el :e ' . expand('<sfile>') . '<cr>'
 execute s:cmd
 
 augroup MyLocalMappings
     autocmd!
 
-    let s:cmd = 'autocmd BufWritePost ' . s:thisFile . ' :source ' . s:thisPath
+    let s:cmd = 'autocmd BufWritePost ' . expand('<sfile>:t') . ' :source ' . expand('<sfile>') 
     execute s:cmd
-
 augroup END
 
