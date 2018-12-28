@@ -13,6 +13,8 @@ augroup MyVimrc
     autocmd BufNewFile,BufRead *.build set ft=xml
     autocmd BufNewFile,BufRead *.wxi set ft=xml
     autocmd BufNewFile,BufRead *.wxs set ft=xml
+    autocmd BufNewFile,BufRead *.vim set ft=vim
+    autocmd BufNewFile,BufRead vimrc set ft=vim
     autocmd BufNewFile,BufRead **/.kube/config set ft=yaml
     autocmd BufNewFile,BufRead gitconfig set ft=gitconfig
 

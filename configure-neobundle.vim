@@ -1,4 +1,4 @@
-call neobundle#begin(expand('<sfile>:h') . '/plugins')
+call neobundle#begin($HOME . '/.bundles')
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 source <sfile>:h/neobundle.vim

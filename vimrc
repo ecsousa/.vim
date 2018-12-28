@@ -23,12 +23,6 @@ endif
 "Load NeoBundle
 source <sfile>:h/load-neobundle.vim
 
-if filereadable(globpath(&rtp, 'colors/jellybeans.vim'))
-	colo jellybeans
-else
-    colo torte
-endif
-
 "Check OmniSharp load needed
 if has('python')
     source <sfile>:h/OmniSharp.vim
@@ -38,4 +32,11 @@ source <sfile>:h/key-mappings.vim
 source <sfile>:h/setup.vim
 source <sfile>:h/file-types.vim
 source <sfile>:h/plugins-config.vim
+
+if filereadable(globpath(&rtp, 'colors/jellybeans.vim'))
+	colo jellybeans
+else
+    colo torte
+endif
+
 
