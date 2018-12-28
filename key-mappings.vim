@@ -74,6 +74,14 @@ nnoremap <A-4> g$
 nnoremap <A-6> g^
 nnoremap <A-0> g^
 
+if has('nvim') && exists('g:GuiLoaded')
+  for char in ['~', '^', '`', '´']
+    for type in ['i', 'c', 'n', 'v']
+      execute type . 'noremap ' . char . char . ' ' . char
+    endfor
+  endfor
+endif
+
 " Custom mappings for the unite buffer
 autocmd FileType unite call s:unite_settings()
 function! s:unite_settings()

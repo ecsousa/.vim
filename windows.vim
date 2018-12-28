@@ -41,7 +41,11 @@ endif
 
 if has('gui')
     set encoding=utf8
-    "let g:airline_powerline_fonts = 1
-    set guifont=Consolas:h12:cANSI
+    if filereadable($WINDIR . '\Fonts\Hack-Regular.ttf')
+        set guifont=Hack:h12:cANSI
+    else
+        set guifont=Consolas:h12:cANSI
+    endif
+
     set noeb novb
 endif
