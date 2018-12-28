@@ -32,7 +32,7 @@ function MyDiff()
 endfunction
 
 "use TEMP dir for swap in windows
-set directory=%TEMP%
+set directory=$TEMP
 
 let s:curlrc = expand('~/.curlrc')
 if filereadable(s:curlrc)
