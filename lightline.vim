@@ -22,13 +22,11 @@ let g:lightline = {
   \ 'subseparator': { 'left': '|', 'right': '|' }
   \ }
 
-if has('guis') && &guifont =~ '^Hack:' || !has('gui') && $HACK_FONT=='1'
-    let g:lightline.component = {
-          \   'readonly': '%{&readonly?"":""}',
-          \ }
+let s:hasHackFont = has('guis') && &guifont =~ '^Hack:' || !has('gui') && $HACK_FONT=='1'
 
-    let g:lightline.separator = { 'left': '', 'right': '' }
-    let g:lightline.subseparator = { 'left': '', 'right': '' }
+if s:hasHackFont
+    let g:lightline.separator = { 'left': "\uE0B0", 'right': "\uE0B2" }
+    let g:lightline.subseparator = { 'left': "\uE0B1", 'right': "\uE0B3" }
 else
 endif
 
@@ -38,7 +36,12 @@ function! LightLineModified()
 endfunction
 
 function! LightLineReadonly()
-  return &ft !~? 'help' && &readonly ? 'RO' : ''
+  if s:hasHackFont
+    let mark = "\uE0A2"
+  else
+    let mark = 'RO' 
+  endif
+  return &ft !~? 'help' && &readonly ? mark : ''
 endfunction
 
 function! LightLineFilename()
@@ -57,7 +60,11 @@ endfunction
 function! LightLineFugitive()
   try
     if expand('%:t') !~? 'Tagbar\|Gundo\|NERD' && &ft !~? 'vimfiler' && exists('*fugitive#head')
-      let mark = ''  " edit here for cool mark
+      if s:hasHackFont
+        let mark = "\uE0A0 "  " edit here for cool mark
+      else
+        let mark = ''  " edit here for cool mark
+      endif
       let _ = fugitive#head()
       return strlen(_) ? mark._ : ''
     endif
@@ -67,7 +74,12 @@ function! LightLineFugitive()
 endfunction
 
 function! LightLineFileformat()
-  return winwidth(0) > 70 ? &fileformat : ''
+  if s:hasHackFont
+    let mark = " \uE0A1"
+  else
+    let mark = '' 
+  endif
+  return winwidth(0) > 70 ? &fileformat . mark : ''
 endfunction
 
 function! LightLineFiletype()
