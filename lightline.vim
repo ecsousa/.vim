@@ -22,7 +22,7 @@ let g:lightline = {
   \ 'subseparator': { 'left': '|', 'right': '|' }
   \ }
 
-if &guifont =~ '^Hack:'
+if has('guis') && &guifont =~ '^Hack:' || !has('gui') && $HACK_FONT=='1'
     let g:lightline.component = {
           \   'readonly': '%{&readonly?"":""}',
           \ }
