@@ -23,11 +23,6 @@ endif
 "Load NeoBundle
 source <sfile>:h/load-neobundle.vim
 
-"Check OmniSharp load needed
-if has('python')
-    source <sfile>:h/OmniSharp.vim
-endif
-
 source <sfile>:h/key-mappings.vim
 source <sfile>:h/setup.vim
 source <sfile>:h/file-types.vim

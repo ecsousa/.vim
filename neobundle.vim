@@ -1,5 +1,4 @@
 
-NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'mxw/vim-jsx'
 if !has('gui') && !has('nvim') && (has('win32') || has('win64') || v:version < 800)
@@ -21,8 +20,9 @@ NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'vim-scripts/Wombat'
 
-if has('python')
+if has('python') || has('python3')
     NeoBundle 'OmniSharp/omnisharp-vim'
+    " NeoBundle 'w0rp/ale'
 
     if has('lua')
         NeoBundle 'Shougo/neocomplete.vim'
