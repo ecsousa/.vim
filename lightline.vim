@@ -22,7 +22,7 @@ let g:lightline = {
   \ 'subseparator': { 'left': '|', 'right': '|' }
   \ }
 
-let s:hasHackFont = has('guis') && &guifont =~ '^Hack:' || !has('gui') && $HACK_FONT=='1'
+let s:hasHackFont = has('gui') && &guifont =~ '^Hack:' || !has('gui') && $HACK_FONT=='1'
 
 if s:hasHackFont
     let g:lightline.separator = { 'left': "\uE0B0", 'right': "\uE0B2" }
