@@ -109,7 +109,11 @@ nnoremap <Leader>sp :OmniSharpStopServer<CR>
 
 "--------------------------------
 " Code Actions
-sign define OmniSharpCodeActions text=💡
+if has('gui')
+    sign define OmniSharpCodeActions text=💡
+else
+    sign define OmniSharpCodeActions text=?
+endif
 
 augroup OSCountCodeActions
   autocmd!
