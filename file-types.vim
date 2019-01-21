@@ -15,16 +15,17 @@ augroup MyVimrc
     autocmd BufNewFile,BufRead *.wxs set ft=xml
     autocmd BufNewFile,BufRead *.vim set ft=vim
     autocmd BufNewFile,BufRead vimrc set ft=vim
+    autocmd BufNewFile,BufRead *.cs set ft=cs
     autocmd BufNewFile,BufRead **/.kube/config set ft=yaml
     autocmd BufNewFile,BufRead gitconfig set ft=gitconfig
 
-    autocmd FileType gitcommit set enc=utf8 spell
+    autocmd FileType gitcommit setlocal enc=utf8 spell
     autocmd FileType gitcommit normal! gg
 
-    autocmd FileType yaml,json,xml set tabstop=2 shiftwidth=2 enc=utf8
+    autocmd FileType yaml,json,xml setlocal tabstop=2 shiftwidth=2 enc=utf8
     autocmd FileType ruby,eruby set filetype=ruby.eruby.chef
 
-    autocmd FileType javascript,javascript.jsx set tabstop=2 shiftwidth=2
+    autocmd FileType javascript,javascript.jsx,*.json setlocal tabstop=2 shiftwidth=2
 
     autocmd FileType markdown set spell
 

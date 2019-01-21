@@ -9,7 +9,6 @@ else
     source <sfile>:h/nix.vim
 endif
 
-filetype plugin indent on
 syntax on
 
 if !has('nvim')
@@ -34,4 +33,5 @@ else
     colo torte
 endif
 
+filetype plugin indent on
 

@@ -14,12 +14,12 @@ let g:ctrlp_custom_ignore = {
 
 source <sfile>:h/lightline.vim
 
-" Check OmniSharp load needed
-if has('python') || has('python3')
-    source <sfile>:h/OmniSharp.vim
-
-    if has('lua')
-        source <sfile>:h/neocomplete.vim
-    endif
-endif
+" " Check OmniSharp load needed
+" if has('python') || has('python3')
+    " source <sfile>:h/OmniSharp.vim
+" 
+    " if has('lua')
+        " source <sfile>:h/neocomplete.vim
+    " endif
+" endif
 

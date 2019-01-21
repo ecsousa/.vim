@@ -20,12 +20,12 @@ NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'vim-scripts/Wombat'
 
-if has('python') || has('python3')
-    NeoBundle 'OmniSharp/omnisharp-vim'
-    " NeoBundle 'w0rp/ale'
-
-    if has('lua')
-        NeoBundle 'Shougo/neocomplete.vim'
-    endif
-endif
+" if has('python') || has('python3')
+    " NeoBundle 'OmniSharp/omnisharp-vim'
+    " " NeoBundle 'w0rp/ale'
+" 
+    " if has('lua')
+        " NeoBundle 'Shougo/neocomplete.vim'
+    " endif
+" endif
 

@@ -1,5 +1,5 @@
 " OmniSharp won't work without this setting
-filetype plugin on
+filetype plugin indent on
 
 let g:OmniSharp_timeout = 10
 let g:OmniSharp_selector_ui = 'ctrlp'
