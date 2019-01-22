@@ -19,6 +19,7 @@ NeoBundle 'wellle/targets.vim'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'vim-scripts/Wombat'
+NeoBundle 'chrisbra/NrrwRgn'
 
 " if has('python') || has('python3')
     " NeoBundle 'OmniSharp/omnisharp-vim'
