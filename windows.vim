@@ -39,6 +39,13 @@ if filereadable(s:curlrc)
     let g:netrw_http_xcmd = '-K' . s:curlrc . ' -o'
 endif
 
+function! SetApiKey(apikey)
+    let l:curlrc = expand('~/.curlrc')
+    let g:netrw_http_xcmd = '-H apikey:' . a:apikey . ' -K' . l:curlrc . ' -o'
+endfunction
+
+command! -nargs=+ SetApiKey call SetApiKey(<f-args>)
+
 if has('gui')
     set encoding=utf8
     if filereadable($WINDIR . '\Fonts\Hack-Regular.ttf')

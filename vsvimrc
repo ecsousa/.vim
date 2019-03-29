@@ -4,6 +4,7 @@ set backspace=indent,eol,start
 
 nnoremap [q :vscmd View.PreviousError<CR>
 nnoremap ]q :vscmd View.NextError<CR>
+nnoremap -q :vscmd View.NextError<CR>:vscmd View.PreviousError<CR>
 
 nnoremap -t :vscmd ReSharper.ReSharper_GotoType<CR>
 nnoremap -s :vscmd ReSharper.ReSharper_GotoSymbol<CR>

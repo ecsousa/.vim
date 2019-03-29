@@ -18,3 +18,5 @@ set backspace=indent,eol,start
 set completeopt=menu
 set laststatus=2
 set clipboard=
+set nrformats-=octal
+
