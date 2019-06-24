@@ -13,7 +13,7 @@ function! UpdatePackageVersion(package, version)
     let @p = l:packagePattern
 
     exe 'Ggrep "' . l:packagePattern . '" **/packages.config'
-    exe 'silent cdo norm 2f= di""vP'
+    exe 'silent cdo norm 02f= di""vP'
 
     let l:packageQF = getqflist()
 

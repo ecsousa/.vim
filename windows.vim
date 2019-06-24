@@ -46,6 +46,13 @@ endfunction
 
 command! -nargs=+ SetApiKey call SetApiKey(<f-args>)
 
+function! SetAppGW(validationId)
+    let l:curlrc = expand('~/.curlrc')
+    let g:netrw_http_xcmd = '-H X-Gateway-Validation-Id:' . a:validationId . ' -K' . l:curlrc . ' -o'
+endfunction
+
+command! -nargs=+ SetAppGW call SetAppGW(<f-args>)
+
 if has('gui')
     set encoding=utf8
     if filereadable($WINDIR . '\Fonts\Hack-Regular.ttf')
