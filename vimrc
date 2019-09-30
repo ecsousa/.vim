@@ -26,12 +26,13 @@ source <sfile>:h/key-mappings.vim
 source <sfile>:h/setup.vim
 source <sfile>:h/file-types.vim
 source <sfile>:h/plugins-config.vim
+source <sfile>:h/OmniSharp.vim
+
 
 if filereadable(globpath(&rtp, 'colors/jellybeans.vim'))
 	colo jellybeans
 else
     colo torte
 endif
-
 filetype plugin indent on
 

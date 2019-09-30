@@ -1,12 +1,13 @@
 " OmniSharp won't work without this setting
 filetype plugin indent on
 
+let g:OmniSharp_server_stdio = 1
 let g:OmniSharp_timeout = 10
 let g:OmniSharp_selector_ui = 'ctrlp'
 
 "This is the default value, setting it isn't actually necessary
 "let g:OmniSharp_host = "http://localhost:2000"
-let g:OmniSharp_use_random_port=1
+"let g:OmniSharp_use_random_port=1
 
 "Set the type lookup function to use the preview window instead of the status line
 "let g:OmniSharp_typeLookupInPreview = 1
@@ -24,12 +25,13 @@ set noshowmatch
 
 "don't autoselect first item in omnicomplete, show if only one item (for preview)
 "remove preview if you don't want to see any documentation whatsoever.
-set completeopt=longest,menuone
+set completeopt=longest,menuone,preview
+
 " Fetch full documentation during omnicomplete requests.
-" There is a performance penalty with this (especially on Mono)
-" By default, only Type/Method signatures are fetched. Full documentation can still be fetched when
-" you need it with the :OmniSharpDocumentation command.
-let g:omnicomplete_fetch_documentation=0
+" By default, only Type/Method signatures are fetched. Full documentation can
+" still be fetched when you need it with the :OmniSharpDocumentation command.
+"let g:omnicomplete_fetch_full_documentation = 1
+
 
 "Move the preview window (code documentation) to the bottom of the screen, so it doesn't move the code!
 "You might also want to look at the echodoc plugin
@@ -40,7 +42,7 @@ set previewheight=5
 let g:ale_linters = { 'cs': ['OmniSharp'] }
 
 " Fetch semantic type/interface/identifier names on BufEnter and highlight them
-let g:OmniSharp_highlight_types = 1
+let g:OmniSharp_highlight_types = 2
 
 augroup omnisharp_commands
     autocmd!
@@ -53,10 +55,10 @@ augroup omnisharp_commands
     autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
 
     " Update the highlighting whenever leaving insert mode
-    autocmd InsertLeave *.cs call OmniSharp#HighlightBuffer()
+    "autocmd InsertLeave *.cs call OmniSharp#HighlightBuffer()
 
     " Alternatively, use a mapping to refresh highlighting for the current buffer
-    autocmd FileType cs nnoremap <buffer> <Leader>th :OmniSharpHighlightTypes<CR>
+    "autocmd FileType cs nnoremap <buffer> <Leader>th :OmniSharpHighlightTypes<CR>
 
     " The following commands are contextual, based on the cursor position.
     autocmd FileType cs nnoremap <buffer> gd :OmniSharpGotoDefinition<CR>
@@ -76,6 +78,8 @@ augroup omnisharp_commands
     " Navigate up and down by method/property/field
     autocmd FileType cs nnoremap <buffer> <C-k> :OmniSharpNavigateUp<CR>
     autocmd FileType cs nnoremap <buffer> <C-j> :OmniSharpNavigateDown<CR>
+
+    autocmd FileType cs nnoremap <buffer> <Leader>cc :OmniSharpGlobalCodeCheck<CR>
 
     autocmd BufEnter *.cs setlocal cmdheight=2
     autocmd BufLeave *.cs setlocal cmdheight=1
@@ -105,7 +109,6 @@ nnoremap <Leader>cf :OmniSharpCodeFormat<CR>
 " Start the omnisharp server for the current solution
 nnoremap <Leader>ss :OmniSharpStartServer<CR>
 nnoremap <Leader>sp :OmniSharpStopServer<CR>
-
 
 "--------------------------------
 " Code Actions

@@ -19,4 +19,4 @@ set completeopt=menu
 set laststatus=2
 set clipboard=
 set nrformats-=octal
-
+set diffopt+=vertical
