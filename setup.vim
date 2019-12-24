@@ -20,3 +20,6 @@ set laststatus=2
 set clipboard=
 set nrformats-=octal
 set diffopt+=vertical
+
+let g:typescript_compiler_binary = 'tsc'
+let g:typescript_compiler_options = ''

@@ -56,8 +56,9 @@ nnoremap <leader>c :let @/='^\(<<<<<<< \\|=======\\|>>>>>>> \)'<CR>
 nnoremap <leader>gs :Gstatus<CR>
 noremap <silent><leader>gb :let b:hlsearch=&hlsearch<CR>:let &hlsearch=0<CR>gg/^# On branch<CR>3wy$ggO<C-R>0: <ESC>:s/\(.*\/\)\?\([^_]*\)\(_[^:]*\)\?/\2<CR>:let @/=''<CR>:let &hlsearch=b:hlsearch<CR>y$ddI<C-R>0
 
-nnoremap <TAB><TAB> :NERDTreeFocus<CR>
-nnoremap <TAB><CR> :NERDTreeCWD<CR>
+nnoremap <TAB><TAB> :NERDTreeFind<CR>
+nnoremap <TAB><SPACE> :NERDTreeClose<CR>
+nnoremap <TAB><CR> :NERDTreeFocus<CR>
 
 " Use C-O for opening help, and C-] does not work with pt-br keyboard
 nnoremap <C-]> <C-]>

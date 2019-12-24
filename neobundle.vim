@@ -22,6 +22,13 @@ NeoBundle 'vim-scripts/Wombat'
 NeoBundle 'chrisbra/NrrwRgn'
 NeoBundle 'rstacruz/sparkup', {'rtp': 'vim'}
 NeoBundle 'OmniSharp/omnisharp-vim'
+NeoBundle 'leafgarland/typescript-vim'
+NeoBundle 'Quramy/vim-js-pretty-template'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'Quramy/tsuquyomi'
+NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'burnettk/vim-angular'
 
 " if has('python') || has('python3')
     " NeoBundle 'OmniSharp/omnisharp-vim'

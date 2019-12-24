@@ -24,10 +24,16 @@ augroup MyVimrc
 
     autocmd FileType yaml,json,xml setlocal tabstop=2 shiftwidth=2 enc=utf8
     autocmd FileType ruby,eruby set filetype=ruby.eruby.chef
-
     autocmd FileType javascript,javascript.jsx,*.json setlocal tabstop=2 shiftwidth=2
-
     autocmd FileType markdown set spell
+
+    autocmd QuickFixCmdPost [^l]* nested cwindow
+    autocmd QuickFixCmdPost    l* nested lwindow
+
+    autocmd FileType typescript JsPreTmpl
+    autocmd FileType typescript syn clear foldBraces
+    autocmd FileType typescript set ts=2 sw=2
+    autocmd FileType html set ts=2 sw=2
 
     au BufReadCmd *.jar,*.xpi,*.docx,*.nupkg call zip#Browse(expand("<amatch>"))
     if has('gui') && (has('win32') || has('win64'))
