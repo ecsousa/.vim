@@ -36,6 +36,11 @@
     pr = !hub pr
     release = !hub release
 
+    #hub release create -m 'Version 6.7.0-gbp6090-01' v6.7.0-gbp6090-01 -p -t story/gbp-6090
+    publish = "!f() { \
+        [ "$1" != "${1/-/}" ] && P=-p; \
+        hub release create -m "Version\\ $1" "v$1" $P -t "$(git rev-parse --abbrev-ref HEAD)"; \
+        }; f"
 
     ck = "!f() { \
         FULL_NAME=$(git branch -r | grep \"\\/$1\\$\" | head -n 1 -) ; \
