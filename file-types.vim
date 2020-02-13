@@ -19,6 +19,8 @@ augroup MyVimrc
     autocmd BufNewFile,BufRead **/.kube/config set ft=yaml
     autocmd BufNewFile,BufRead gitconfig set ft=gitconfig
 
+    autocmd BufWritePost Shortcuts.ahk call system('start ' . expand('%'))
+
     autocmd FileType gitcommit setlocal enc=utf8 spell
     autocmd FileType gitcommit normal! gg
 
