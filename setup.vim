@@ -23,3 +23,4 @@ set diffopt+=vertical
 
 let g:typescript_compiler_binary = 'tsc'
 let g:typescript_compiler_options = ''
+let g:netrw_silent= 1
