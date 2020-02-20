@@ -38,8 +38,9 @@
 
     #hub release create -m 'Version 6.7.0-gbp6090-01' v6.7.0-gbp6090-01 -p -t story/gbp-6090
     publish = "!f() { \
-        [ "$1" != "${1/-/}" ] && P=-p; \
-        hub release create -m "Version\\ $1" "v$1" $P -t "$(git rev-parse --abbrev-ref HEAD)"; \
+        VERSION=${1#v}; \
+        [ "$VERSION" != "${VERSION/-/}" ] && P=-p; \
+        hub release create -m "Version\\ $VERSION" "v$VERSION" $P -t "$(git rev-parse --abbrev-ref HEAD)"; \
         }; f"
 
     ck = "!f() { \
