@@ -1,7 +1,7 @@
 " set default filetypes
 augroup MyVimrc
     autocmd!
-    autocmd BufNewFile,BufRead COMMIT_EDITMSG set ft=gitcommit
+    autocmd BufNewFile,BufRead COMMIT_EDITMSG,differential-update-comments set ft=gitcommit
     autocmd BufNewFile,BufRead *.vb set ft=vbnet
     autocmd BufNewFile,BufRead *._ps1 set ft=ps1
     autocmd BufNewFile,BufRead *.msbuild set ft=xml
@@ -24,6 +24,7 @@ augroup MyVimrc
     autocmd FileType gitcommit setlocal enc=utf8 spell
     autocmd FileType gitcommit normal! gg
 
+    autocmd FileType json syntax match Comment +\/\/.\+$+
     autocmd FileType yaml,json,xml setlocal tabstop=2 shiftwidth=2 enc=utf8
     autocmd FileType ruby,eruby set filetype=ruby.eruby.chef
     autocmd FileType javascript,javascript.jsx,*.json setlocal tabstop=2 shiftwidth=2
@@ -32,10 +33,13 @@ augroup MyVimrc
     autocmd QuickFixCmdPost [^l]* nested cwindow
     autocmd QuickFixCmdPost    l* nested lwindow
 
-    autocmd FileType typescript JsPreTmpl
+    " autocmd FileType typescript JsPreTmpl
     autocmd FileType typescript syn clear foldBraces
-    autocmd FileType typescript set ts=2 sw=2
+    autocmd FileType typescript,typescriptreact set ts=2 sw=2
     autocmd FileType html set ts=2 sw=2
+
+    " autocmd BufWritePre,TextChanged,InsertLeave *.js,*.tsx,*.ts Neoformat
+    autocmd FileType javascript,typescript,typescriptreact setlocal formatprg=prettier\ --single-quote\ --trailing-comma\ es5
 
     au BufReadCmd *.jar,*.xpi,*.docx,*.nupkg call zip#Browse(expand("<amatch>"))
     if has('gui') && (has('win32') || has('win64'))

@@ -1,6 +1,17 @@
 "Map C-\ to C-], to fix issue with pt-br keyboard layout
 silent! nnoremap <C-\> <C-]>
 
+"Coc TS
+
+" Apply AutoFix to problem on the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
 " Delete mappings
 function! ForceUnmap(map, mode)
     if mapcheck(a:map, a:mode) != ""
@@ -41,16 +52,25 @@ nnoremap <TAB>x :tabclose<CR>
 
 
 " Unite
-let g:unite_source_history_yank_enable = 1
-if exists("*unite#filters#matcher_default#use")
-    call unite#filters#matcher_default#use(['matcher_fuzzy'])
-endif
-nnoremap <leader>u :<C-u>Unite -no-split<cr>
-nnoremap <leader>o :<C-u>Unite -no-split -buffer-name=outline outline<cr>
-nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffer  buffer<cr>
+"let g:unite_source_history_yank_enable = 1
+"if exists("*unite#filters#matcher_default#use")
+    "call unite#filters#matcher_default#use(['matcher_fuzzy'])
+"endif
+"nnoremap <leader>u :<C-u>Unite -no-split<cr>
+" nnoremap <leader>o :<C-u>Unite -no-split -buffer-name=outline outline<cr>
+" nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffer  buffer<cr>
 
 " Git Conflict merging
 nnoremap <leader>c :let @/='^\(<<<<<<< \\|=======\\|>>>>>>> \)'<CR>
+
+" Coc
+nnoremap <leader>z :CocFzfList<CR>
+nnoremap <leader>c :CocFzfList actions<CR>
+nnoremap <leader>y :CocFzfList symbols<CR>
+nnoremap <leader>f :Files<CR>
+nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>o :CocFzfList outline<CR>
+nnoremap <leader>s :CocFzfList sources<CR>
 
 " Fugitive
 nnoremap <leader>gs :Gstatus<CR>

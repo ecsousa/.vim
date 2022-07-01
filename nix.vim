@@ -2,6 +2,11 @@ if has('gui')
     set guifont=Monospace\ 13
 endif
 
+if has('nvim')
+    set guifont=Monaco:h16
+endif
+
+
 function! SetApiKey(apikey)
     let g:netrw_http_xcmd = '-H apikey:' . a:apikey . ' -o'
 endfunction
@@ -16,4 +21,4 @@ command! -nargs=+ SetAppGW call SetAppGW(<f-args>)
 
 
 set noeb vb t_vb=
-
+set dir=/tmp

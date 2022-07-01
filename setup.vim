@@ -19,8 +19,11 @@ set completeopt=menu
 set laststatus=2
 set clipboard=
 set nrformats-=octal
-set diffopt+=vertical
+" set diffopt+=vertical
 
 let g:typescript_compiler_binary = 'tsc'
 let g:typescript_compiler_options = ''
 let g:netrw_silent= 1
+
+" Use formatprg when available
+let g:neoformat_try_formatprg = 1

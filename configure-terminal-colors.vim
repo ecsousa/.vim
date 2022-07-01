@@ -12,7 +12,7 @@ if !has('gui') && has('win32')
     set t_Co=256
 else
     if v:version >= 800
-        set termguicolors
+         " set termguicolors
     endif
 endif
 
@@ -24,6 +24,6 @@ if &term =~ '256color'
     " disable Background Color Erase (BCE) so that color schemes
     " render properly when inside 256-color tmux and GNU screen.
     " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
-    set t_ut=
+    "set t_ut=
 endif
 

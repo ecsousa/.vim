@@ -28,7 +28,6 @@
 
     config-gm = !git config user.name 'Eduardo Sousa' && git config user.email 'ecsousa@gmail.com'
     config-ac = !git config user.name 'Eduardo Sousa' && git config user.email 'esousa@avenuecode.com'
-    config-gap = !git config user.name 'Eduardo Sousa' && git config user.email 'Eduardo_Sousa@gap.com'
 
     config-hub = !git config --local hub.host `git hub-host`
 
