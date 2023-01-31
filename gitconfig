@@ -3,15 +3,13 @@
 ## Windows
 # [include]
 #     path=~/vimfiles/gitconfig
+#     path=~/vimfiles/gitconfig-windows
 #
 
 ## *nix/osx
 # [include]
 #     path=~/.vim/gitconfig
 #
-
-[core]
-    symlinks = true
 
 [push]
 	default = simple
@@ -26,8 +24,11 @@
     push-track = !git push -u origin `git local-branch`
     set-track = !git branch -u origin/`git local-branch`
 
-    config-gm = !git config user.name 'Eduardo Sousa' && git config user.email 'ecsousa@gmail.com'
+    config-gm = !git config user.name 'Eduardo Sousa' && git config user.email 'ecsousa@gmail.com' && git config-sign
     config-ac = !git config user.name 'Eduardo Sousa' && git config user.email 'esousa@avenuecode.com'
+    config-gap = !git config user.name 'Eduardo Sousa' && git config user.email 'eduardo_sousa@gap.com'
+
+    config-sign = !git config user.signingkey 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF6XEdnyJsJYVj+cFemZ0TL5W+jYHWdNFVIRFs3giVXD' && git config commit.gpgsign true
 
     config-hub = !git config --local hub.host `git hub-host`
 
