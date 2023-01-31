@@ -11,6 +11,12 @@
 #     path=~/.vim/gitconfig
 #
 
+## WSL
+# [include]
+#     path=~/.vim/gitconfig
+#     path=~/.vim/gitconfig-wsl
+#
+
 [push]
 	default = simple
 
