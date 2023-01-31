@@ -17,6 +17,9 @@
 #     path=~/.vim/gitconfig-wsl
 #
 
+[gpg "ssh"]
+  allowedSignersFile = "allowed_signers"
+
 [push]
 	default = simple
 
