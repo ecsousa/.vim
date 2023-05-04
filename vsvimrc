@@ -51,3 +51,5 @@ inoremap <C-J> <C-O><C-E>
 inoremap <C-K> <C-O><C-Y>
 
 nnoremap -a ggVG
+
+nnoremap <TAB> i<TAB><ESC>
