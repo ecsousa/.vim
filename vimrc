@@ -26,6 +26,8 @@ source <sfile>:h/key-mappings.vim
 source <sfile>:h/setup.vim
 source <sfile>:h/file-types.vim
 source <sfile>:h/plugins-config.vim
+source <sfile>:h/lsp.vim
+source <sfile>:h/mkdpreview.vim
 
 if filereadable(globpath(&rtp, 'colors/jellybeans.vim'))
 	colo jellybeans
