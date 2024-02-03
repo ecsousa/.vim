@@ -12,6 +12,7 @@ NeoBundle 'mattn/vim-lsp-settings'
 NeoBundle 'prabirshrestha/asyncomplete.vim'
 NeoBundle 'prabirshrestha/asyncomplete-lsp.vim'
 NeoBundle 'iamcco/markdown-preview.nvim'
+NeoBundle 'junegunn/fzf'
 
 NeoBundle 'github/copilot.vim'
 
