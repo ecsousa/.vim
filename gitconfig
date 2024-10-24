@@ -16,6 +16,13 @@
 #     path=~/.vim/gitconfig
 #     path=~/.vim/gitconfig-wsl
 #
+#
+
+[includeIf "hasconfig:remote.*.url:https://github.gapinc.com/**"]
+    path = gitconfig-gap
+
+[includeIf "hasconfig:remote.*.url:https://github.com/**"]
+    path = gitconfig-gm
 
 [gpg "ssh"]
   allowedSignersFile = "allowed_signers"

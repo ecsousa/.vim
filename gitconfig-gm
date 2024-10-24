@@ -1,0 +1,7 @@
+[user]
+name = Eduardo Sousa
+email = ecsousa@gap.com
+signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF6XEdnyJsJYVj+cFemZ0TL5W+jYHWdNFVIRFs3giVXD
+
+[commit]
+gpgsign = true
