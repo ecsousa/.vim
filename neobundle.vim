@@ -15,5 +15,6 @@ NeoBundle 'iamcco/markdown-preview.nvim'
 NeoBundle 'junegunn/fzf'
 
 NeoBundle 'github/copilot.vim'
+NeoBundle 'kmonad/kmonad-vim'
 
 

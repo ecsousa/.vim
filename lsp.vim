@@ -1,3 +1,17 @@
+let g:lsp_settings = {
+\   'pylsp-all': {
+\     'workspace_config': {
+\       'pylsp': {
+\         'plugins': {
+\           'pycodestyle': {
+\             'ignore': ["E221", "E501"]
+\           }
+\         }
+\       }
+\     }
+\   },
+\}
+
 if executable('pylsp')
     " pip install python-lsp-server
     au User lsp_setup call lsp#register_server({
@@ -35,3 +49,4 @@ augroup lsp_install
     " call s:on_lsp_buffer_enabled only for languages that has the server registered.
     autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
+
